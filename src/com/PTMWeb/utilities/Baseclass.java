@@ -227,16 +227,19 @@ public class Baseclass {
 	
 	// @Parameters("browser")
 	
-	@BeforeMethod
+	@BeforeTest
 	public void setup() throws Exception {
+		
 		String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 		String repName = "PTM Web-Report-"+timestamp+".html";
 		extent=new ExtentReports();
-	System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
-	driver=new ChromeDriver();
+	
 	//recorder.start();
 	String log4jConfPath = "C:\\Users\\Veeralakshmi.bikkina\\PTMWeb\\PTMWeb\\log4j.properties";
 	PropertyConfigurator.configure(log4jConfPath);
+	
+	System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+	
 	
 	ChromeOptions options = new ChromeOptions();
 	
@@ -245,7 +248,6 @@ public class Baseclass {
 	
 	chromePrefs.put("download.default_directory", "C:\\Users\\Veeralakshmi.bikkina\\PTMWeb\\Asure Tax Portal\\Downloads");
 	options.setExperimentalOption("prefs",chromePrefs);
-	
 	driver=new ChromeDriver(options);
 	
 // ScreenRecorderUtil.startRecord("setup");
@@ -273,8 +275,8 @@ public class Baseclass {
 	Login.clickOnLogin();
 	recorder=new ATUTestRecorder(videoFolder, videoFile, false);
 	recorder.start();
+	}
 
-}
 	
 //	@DataProvider(name="loginTestData")
 //	public Object[][] getData() {
