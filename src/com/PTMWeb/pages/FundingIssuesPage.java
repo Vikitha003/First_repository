@@ -1,6 +1,7 @@
 package com.PTMWeb.pages;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -67,14 +68,17 @@ public class FundingIssuesPage extends Baseclass{
 		
 		try {
 				
-				Search.sendKeys(payrollID);
+				Search.sendKeys(payrollID_DoughNuts);
 			
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(Search + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to search with Payroll ID in Funding Issues page");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(Search + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to search with Payroll ID in Funding Issues page");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.."+ Search + e);
+            assertTrue(false, "Unable to search with Payroll ID in Funding Issues page");
         }
 		Thread.sleep(3000);
 	}
@@ -86,11 +90,15 @@ public void searchwithAmount() throws InterruptedException {
 				Search.sendKeys(FIAmount);
 			
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(Search + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to search with Amount in Funding Issues page");
+            
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(Search + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to search with Amount in Funding Issues page");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." + Search + e);
+            assertTrue(false, "Unable to search with Amount in Funding Issues page");
         }
 		Thread.sleep(3000);
 	}
@@ -102,11 +110,14 @@ public void searchwithFundingDate() throws InterruptedException {
 			Search.sendKeys(FIDuedate);
 		
 	} catch (StaleElementReferenceException e) {
-        System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+        System.out.println(Search + " is not visble to click.." + "- StaleElementReferenceException");
+        assertTrue(false, "Unable to search with Funding Date in Funding Issues page");
     } catch (NoSuchElementException e) {
-        System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+        System.out.println(Search + " is not visble to click.." + "-NosuchElementException");
+        assertTrue(false, "Unable to search with Funding Date in Funding Issues page");
     } catch (Exception e) {
-        System.out.println("unable to click.." + e);
+        System.out.println("unable to click.." + Search + e);
+        assertTrue(false, "Unable to search with Funding Date in Funding Issues page");
     }
 	Thread.sleep(3000);
 }
@@ -118,11 +129,14 @@ public void searchwithReason() throws InterruptedException {
 			Search.sendKeys(FIReason);
 		
 	} catch (StaleElementReferenceException e) {
-        System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+        System.out.println(Search + " is not visble to click.." + "- StaleElementReferenceException");
+        assertTrue(false, "Unable to search with Reason in Funding Issues page");
     } catch (NoSuchElementException e) {
-        System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+        System.out.println(Search + " is not visble to click.." + "-NosuchElementException");
+        assertTrue(false, "Unable to search with Reason in Funding Issues page");
     } catch (Exception e) {
-        System.out.println("unable to click.." + e);
+        System.out.println("unable to click.." + Search + e);
+        assertTrue(false, "Unable to search with Reason in Funding Issues page");
     }
 	Thread.sleep(3000);
 }
@@ -131,13 +145,16 @@ public void verifyPayrollID() throws InterruptedException {
 	try {
 		
 		String btext= payrollId.getText();
-		assertEquals(btext, payrollID);
+		assertEquals(btext, payrollID_DoughNuts);
 	} catch (StaleElementReferenceException e) {
-        System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+        System.out.println(payrollId + " is not visble to click.." + "- StaleElementReferenceException");
+        assertTrue(false, "Unable to verify Payroll ID in Funding Issues page");
     } catch (NoSuchElementException e) {
-        System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+        System.out.println(payrollId + " is not visble to click.." + "-NosuchElementException");
+        assertTrue(false, "Unable to verify Payroll ID in Funding Issues page");
     } catch (Exception e) {
-        System.out.println("unable to click.." + e);
+        System.out.println("unable to click.." + payrollId + e);
+        assertTrue(false, "Unable to verify Payroll ID in Funding Issues page");
     }
 	Thread.sleep(5000);
 }
@@ -148,11 +165,14 @@ public void verifyAmount() throws InterruptedException {
 		String btext= Amount.getText();
 		assertEquals(btext, FIAmount_specialchar);
 	} catch (StaleElementReferenceException e) {
-        System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+        System.out.println(Amount + " is not visble to click.." + "- StaleElementReferenceException");
+        assertTrue(false, "Unable to verify Amount in Funding Issues page");
     } catch (NoSuchElementException e) {
-        System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+        System.out.println(Amount + " is not visble to click.." + "-NosuchElementException");
+        assertTrue(false, "Unable to verify Amount in Funding Issues page");
     } catch (Exception e) {
-        System.out.println("unable to click.." + e);
+        System.out.println("unable to click.."+ Amount + e);
+        assertTrue(false, "Unable to verify Amount in Funding Issues page");
     }
 	Thread.sleep(5000);
 }
@@ -163,11 +183,14 @@ public void verifyFundingDueDate() throws InterruptedException {
 		String btext= FundingDate.getText();
 		assertEquals(btext, FIDuedate);
 	} catch (StaleElementReferenceException e) {
-        System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+        System.out.println(FundingDate + " is not visble to click.." + "- StaleElementReferenceException");
+        assertTrue(false, "Unable to verify Funding Date in Funding Issues page");
     } catch (NoSuchElementException e) {
-        System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+        System.out.println(FundingDate + " is not visble to click.." + "-NosuchElementException");
+        assertTrue(false, "Unable to verify Funding Date in Funding Issues page");
     } catch (Exception e) {
-        System.out.println("unable to click.." + e);
+        System.out.println("unable to click.." + FundingDate + e);
+        assertTrue(false, "Unable to verify Funding Date in Funding Issues page");
     }
 	Thread.sleep(5000);
 }
@@ -178,11 +201,14 @@ public void verifyReason() throws InterruptedException {
 		String btext= Reason.getText();
 		assertEquals(btext, FIReason);
 	} catch (StaleElementReferenceException e) {
-        System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+        System.out.println(Reason + " is not visble to click.." + "- StaleElementReferenceException");
+        assertTrue(false, "Unable to verify Reason in Funding Issues page");
     } catch (NoSuchElementException e) {
-        System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+        System.out.println(Reason + " is not visble to click.." + "-NosuchElementException");
+        assertTrue(false, "Unable to verify Reason in Funding Issues page");
     } catch (Exception e) {
-        System.out.println("unable to click.." + e);
+        System.out.println("unable to click.." + Reason + e);
+        assertTrue(false, "Unable to verify Reason in Funding Issues page");
     }
 	Thread.sleep(5000);
 }

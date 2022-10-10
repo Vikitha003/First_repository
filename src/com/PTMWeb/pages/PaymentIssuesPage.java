@@ -68,13 +68,13 @@ public class PaymentIssuesPage extends Baseclass{
 			}
 		} catch (StaleElementReferenceException e) {
             System.out.println(Search +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
-            assertTrue(false, "Unable to search with PayrollID in Payments Issues");
+            assertTrue(false, "Unable to clear the search in Payments Issues");
         } catch (NoSuchElementException e) {
             System.out.println(Search +"Element" + " is not visble to click.." + "-NosuchElementException");
-            assertTrue(false, "Unable to search with PayrollID in Payments Issues");
+            assertTrue(false, "Unable to clear the search in Payments Issues");
         } catch (Exception e) {
             System.out.println("unable to click.." + Search+ e);
-            assertTrue(false, "Unable to search with PayrollID in Payments Issues");
+            assertTrue(false, "Unable to clear the search in Payments Issues");
         }
 		Thread.sleep(3000);
 	}
@@ -82,7 +82,7 @@ public class PaymentIssuesPage extends Baseclass{
 public void searchwithPayrollID() throws InterruptedException {
 		
 		try {
-			Search.sendKeys(payrollID);
+			Search.sendKeys(payrollID_DoughNuts);
 			
 			
 		} catch (StaleElementReferenceException e) {
@@ -138,7 +138,7 @@ public void searchwithPayrollID_TIBERIUM() throws InterruptedException {
 public void searchwithAgencyID() throws InterruptedException {
 	
 	try {
-		Search.sendKeys(PIAgencyID);
+		Search.sendKeys(PaymentIssues_AgencyID);
 		
 	} catch (StaleElementReferenceException e) {
         System.out.println(Search +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
@@ -192,7 +192,7 @@ public void searchwithAgencyID_TIBERIUM() throws InterruptedException {
 public void searchwithDescription() throws InterruptedException {
 	
 	try {
-		Search.sendKeys(PIDescription);
+		Search.sendKeys(PaymentIssues_Description);
 		
 	} catch (StaleElementReferenceException e) {
         System.out.println(Search +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
@@ -246,7 +246,7 @@ public void searchwithDescription_TIBERIUM() throws InterruptedException {
 public void searchwithDuedate() throws InterruptedException {
 	
 	try {
-		Search.sendKeys(PIDueDate);
+		Search.sendKeys(PaymentIssues_DueDate);
 		
 	} catch (StaleElementReferenceException e) {
         System.out.println(Search +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
@@ -300,7 +300,7 @@ public void searchwithDuedate_TIBERIUM() throws InterruptedException {
 public void searchwithAmount() throws InterruptedException {
 	
 	try {
-		Search.sendKeys(PIAmount);
+		Search.sendKeys(PaymentIssues_Amount);
 		
 	} catch (StaleElementReferenceException e) {
         System.out.println(Search +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
@@ -354,7 +354,7 @@ public void searchwithAmount_TIBERIUM() throws InterruptedException {
 public void searchwithReasoncode() throws InterruptedException {
 	
 	try {
-		Search.sendKeys(PIReasonCode);
+		Search.sendKeys(PaymentIssues_ReasonCode);
 		
 	} catch (StaleElementReferenceException e) {
         System.out.println(Search +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
@@ -441,7 +441,7 @@ public void clickOnPIClose() throws InterruptedException {
 public void verifyPayrollID() throws InterruptedException {
 	try {
 		String btext= payrollId.getText();
-		assertEquals(btext, payrollID);
+		assertEquals(btext, payrollID_DoughNuts);
 	} catch (StaleElementReferenceException e) {
         System.out.println(payrollId +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
         assertTrue(false, "Payroll ID is not verified in Payment Issues Page");
@@ -492,7 +492,7 @@ public void verifyPayrollID_TIBERIUM() throws InterruptedException {
 public void verifyAgencyID() throws InterruptedException {
 	try {
 		String btext= AgencyID.getText();
-		assertEquals(btext, PIAgencyID);
+		assertEquals(btext, PaymentIssues_AgencyID);
 	} catch (StaleElementReferenceException e) {
         System.out.println(AgencyID +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
         assertTrue(false, "Agency ID is not verified in Payment Issues Page");
@@ -543,7 +543,7 @@ public void verifyAgencyID_TIBERIUM() throws InterruptedException {
 public void verifyDecription() throws InterruptedException {
 	try {
 		String btext= Description.getText();
-		assertEquals(btext, PIDescription);
+		assertEquals(btext, PaymentIssues_Description);
 	} catch (StaleElementReferenceException e) {
         System.out.println(Description +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
         assertTrue(false, "Description is not verified in Payment Issues Page");
@@ -594,7 +594,7 @@ public void verifyDecription_TIBERIUM() throws InterruptedException {
 public void verifyDueDate() throws InterruptedException {
 	try {
 		String btext= Duedate.getText();
-		assertEquals(btext, PIDueDate);
+		assertEquals(btext, PaymentIssues_DueDate);
 	} catch (StaleElementReferenceException e) {
         System.out.println(Duedate +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
         assertTrue(false, "Duedate is not verified in Payment Issues Page");
@@ -645,7 +645,7 @@ public void verifyDueDate_TIBERIUM() throws InterruptedException {
 public void verifyAmount() throws InterruptedException {
 	try {
 		String btext= Amount.getText();
-		assertEquals(btext, PIAmount_specialchar);
+		assertEquals(btext, PaymentIssues_Amount_specialchar);
 	} catch (StaleElementReferenceException e) {
         System.out.println(Amount +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
         assertTrue(false, "Amount is not verified in Payment Issues Page");
@@ -696,7 +696,7 @@ public void verifyAmount_TIBERIUM() throws InterruptedException {
 public void verifyReasoncode() throws InterruptedException {
 	try {
 		String btext= ReasonCode.getText();
-		assertEquals(btext, PIReasonCode);
+		assertEquals(btext, PaymentIssues_ReasonCode);
 	} catch (StaleElementReferenceException e) {
         System.out.println(ReasonCode +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
         assertTrue(false, "Reasoncode is not verified in Payment Issues Page");

@@ -1,11 +1,9 @@
 package com.PTMWeb.testcases;
 
-import java.io.File;
+
 import java.io.IOException;
 
-import org.apache.poi.ss.usermodel.Workbook;
-import org.junit.Assert;
-import org.openqa.selenium.interactions.Actions;
+
 import org.testng.annotations.Test;
 
 import com.PTMWeb.pages.AlertsPage;
@@ -22,45 +20,47 @@ import com.PTMWeb.pages.RecentLiabilitiesPage;
 import com.PTMWeb.pages.TaxAgenciesPage;
 import com.PTMWeb.pages.TaxPackagesPage;
 import com.PTMWeb.pages.UpcomingPaymentspage;
-import com.PTMWeb.pages.loginPage;
+
 import com.PTMWeb.utilities.Baseclass;
 import com.PTMWeb.utilities.Reports;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
+
 import atu.testrecorder.exceptions.ATUTestRecorderException;
 
 public class TC_AsureTaxPortal extends Baseclass{
-	ExtentTest test;
+	public static ExtentTest test;
 	ExtentReports rep;
 	
     @Test(description = "User downloads the Liabilities Issues Excel Report by searching with Payroll ID")
 	public void TC_01_User_downloads_the_Liabilities_issues_Report_by_searching_with_Payroll_ID() throws InterruptedException, IOException, ATUTestRecorderException{
-    rep=Reports.InitializeReport();
-	DashboardPage dashboard= new DashboardPage(driver);
-	dashboard.selectClientList();
-	dashboard.selectDoughNutsInc();
-	dashboard.clickOnLiabilitiesIssues();
+    	rep=Reports.InitializeReport();
+        
+    	DashboardPage dashboard= new DashboardPage(driver);
+    	dashboard.selectClientList();
+    	dashboard.selectDoughNutsInc();
+    	dashboard.clickOnLiabilitiesIssues();
 	LiabilitiesIssuesPage LiabilitiesIssues = new LiabilitiesIssuesPage(driver);
 	LiabilitiesIssues.searchwithPayrollID();
 	LiabilitiesIssues.clickOnExporttoExcel();
-	isFileDownloaded("Liabilities Issues_04150_20220928");
+	isFileDownloaded("Liabilities Issues_04150_20221010.xlsx");
 	DeleteFile();
 	}
    
     @Test(description = "User downloads the Liabilities Issues Excel Report by searching with Check Date")
     public void TC_02_User_downloads_the_Liabilities_issues_Report_by_searching_with_Check_Date() throws InterruptedException, ATUTestRecorderException {
     	rep=Reports.InitializeReport();
-    	
+    
     	DashboardPage dashboard= new DashboardPage(driver);
     	dashboard.selectClientList();
     	dashboard.selectDoughNutsInc();
     	dashboard.clickOnLiabilitiesIssues();
 		LiabilitiesIssuesPage LiabilitiesIssues = new LiabilitiesIssuesPage(driver);
-		LiabilitiesIssues.searchwithCheckDate(LIcheckDate);
+		LiabilitiesIssues.searchwithCheckDate(LiabilitiesIssues_checkDate);
 		LiabilitiesIssues.verifycheckDate();
 		LiabilitiesIssues.clickOnExporttoExcel();
-		isFileDownloaded("Liabilities Issues_04150_20220928");
+		isFileDownloaded("Liabilities Issues_04150_20221010.xlsx");
 		DeleteFile();
 		
     }
@@ -74,10 +74,10 @@ public class TC_AsureTaxPortal extends Baseclass{
     	dashboard.selectDoughNutsInc();
     	dashboard.clickOnLiabilitiesIssues();
     	LiabilitiesIssuesPage LiabilitiesIssues = new LiabilitiesIssuesPage(driver);
-    	LiabilitiesIssues.searchwithReason(LIReason);
+    	LiabilitiesIssues.searchwithReason(LiabilitiesIssues_Reason);
     	LiabilitiesIssues.verifyReason();
     	LiabilitiesIssues.clickOnExporttoExcel();
-    	isFileDownloaded("Liabilities Issues_04150_20220928");
+    	isFileDownloaded("Liabilities Issues_04150_20221010.xlsx");
     	DeleteFile();
 	
     }
@@ -92,7 +92,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	PaymentIssuesPage PaymentsIssues = new PaymentIssuesPage(driver);
     	PaymentsIssues.searchwithPayrollID();
     	PaymentsIssues.clickOnExporttoExcel();
-    	isFileDownloaded("Payments Issues_04150_20220928");
+    	isFileDownloaded("Payments Issues_04150_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -107,7 +107,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	PaymentsIssues.searchwithAgencyID();
     	PaymentsIssues.verifyAgencyID();
     	PaymentsIssues.clickOnExporttoExcel();
-    	isFileDownloaded("Payments Issues_04150_20220928");
+    	isFileDownloaded("Payments Issues_04150_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -122,7 +122,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	PaymentsIssues.searchwithDescription();
     	PaymentsIssues.verifyDecription();
     	PaymentsIssues.clickOnExporttoExcel();
-    	isFileDownloaded("Payments Issues_04150_20220928");
+    	isFileDownloaded("Payments Issues_04150_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -137,7 +137,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	PaymentsIssues.searchwithDuedate();
     	PaymentsIssues.verifyDueDate();
     	PaymentsIssues.clickOnExporttoExcel();
-    	isFileDownloaded("Payments Issues_04150_20220928");
+    	isFileDownloaded("Payments Issues_04150_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -152,7 +152,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	PaymentsIssues.searchwithAmount();
     	PaymentsIssues.verifyAmount();
     	PaymentsIssues.clickOnExporttoExcel();
-    	isFileDownloaded("Payments Issues_04150_20220928");
+    	isFileDownloaded("Payments Issues_04150_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -167,7 +167,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	PaymentsIssues.searchwithReasoncode();
     	PaymentsIssues.verifyReasoncode();
     	PaymentsIssues.clickOnExporttoExcel();
-    	isFileDownloaded("Payments Issues_04150_20220928");
+    	isFileDownloaded("Payments Issues_04150_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -181,7 +181,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	NSFHoldPage NSFHold = new NSFHoldPage(driver);
     	NSFHold.searchwithPayrollID();
     	NSFHold.clickOnExporttoExcel();
-    	isFileDownloaded("NSF Hold_04150_20220928");
+    	isFileDownloaded("NSF Hold_04150_20221010.xlsx");
     	DeleteFile();
     }
   
@@ -196,7 +196,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	NSFHold.searchwithAgencyID();
     	NSFHold.verifyAgencyID();
     	NSFHold.clickOnExporttoExcel();
-    	isFileDownloaded("NSF Hold_04150_20220928");
+    	isFileDownloaded("NSF Hold_04150_20221010.xlsx");
     	DeleteFile();
     }
    
@@ -211,7 +211,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	NSFHold.searchwithDescription();
     	NSFHold.verifyDescription();
     	NSFHold.clickOnExporttoExcel();
-    	isFileDownloaded("NSF Hold_04150_20220928");
+    	isFileDownloaded("NSF Hold_04150_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -227,7 +227,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	NSFHold.searchwithAmount();
     	NSFHold.verifyAmount();
     	NSFHold.clickOnExporttoExcel();
-    	isFileDownloaded("NSF Hold_04150_20220928");
+    	isFileDownloaded("NSF Hold_04150_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -241,7 +241,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	AppliedForPage AppliedFor=new AppliedForPage(driver);
     	AppliedFor.searchwithPayrollID();
     	AppliedFor.clickOnExporttoExcel();
-    	isFileDownloaded("Applied For_04150_20220928");
+    	isFileDownloaded("Applied For_04150_20221010.xlsx");
     	DeleteFile();
     }
    
@@ -256,7 +256,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	AppliedFor.searchwithAgencyID();
     	AppliedFor.verifyAgencyID();
     	AppliedFor.clickOnExporttoExcel();
-    	isFileDownloaded("Applied For_04150_20220928");
+    	isFileDownloaded("Applied For_04150_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -271,7 +271,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	AppliedFor.searchwithDescription();
     	AppliedFor.verifyDecription();
     	AppliedFor.clickOnExporttoExcel();
-    	isFileDownloaded("Applied For_04150_20220928");
+    	isFileDownloaded("Applied For_04150_20221010.xlsx");
     	DeleteFile();
     	
     }
@@ -287,7 +287,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	AppliedFor.searchwithCheckdate();
     	AppliedFor.verifyCheckDate();
     	AppliedFor.clickOnExporttoExcel();
-    	isFileDownloaded("Applied For_04150_20220928");
+    	isFileDownloaded("Applied For_04150_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -302,7 +302,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	AppliedFor.searchwithAmount();
     	AppliedFor.verifyAmount();
     	AppliedFor.clickOnExporttoExcel();
-    	isFileDownloaded("Applied For_04150_20220928");
+    	isFileDownloaded("Applied For_04150_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -317,7 +317,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	AppliedFor.searchwithDuedate();
     	AppliedFor.verifyDueDate();
     	AppliedFor.clickOnExporttoExcel();
-    	isFileDownloaded("Applied For_04150_20220928");
+    	isFileDownloaded("Applied For_04150_20221010.xlsx");
     	DeleteFile();	
     }
     
@@ -332,7 +332,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	Alerts.searchwithActivateFromdate();
     	Alerts.verifyActiveFromDate();
     	Alerts.clickOnExporttoExcel();
-    	isFileDownloaded("Alerts_04150_20220928");
+    	isFileDownloaded("Alerts_04150_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -347,7 +347,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	Alerts.searchwithAlertName();
     	Alerts.verifyAlertName();
     	Alerts.clickOnExporttoExcel();
-    	isFileDownloaded("Alerts_04150_20220928");
+    	isFileDownloaded("Alerts_04150_20221010.xlsx");
     	DeleteFile();	
     }
     
@@ -362,7 +362,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	Alerts.searchwithAlertText();
     	Alerts.verifyAlertText();
     	Alerts.clickOnExporttoExcel();
-    	isFileDownloaded("Alerts_04150_20220928");
+    	isFileDownloaded("Alerts_04150_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -375,7 +375,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	RecentLiabilitiesPage RecentLiabilities= new RecentLiabilitiesPage(driver);
     	RecentLiabilities.searchwithPayrollID();
     	RecentLiabilities.clickOnExporttoExcel();
-    	isFileDownloaded("RecentLiabilities_04150_20220928");
+    	isFileDownloaded("RecentLiabilities_04150_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -386,10 +386,10 @@ public class TC_AsureTaxPortal extends Baseclass{
     	dashboard.selectClientList();
     	dashboard.selectDoughNutsInc();
     	RecentLiabilitiesPage RecentLiabilities= new RecentLiabilitiesPage(driver);
-    	RecentLiabilities.searchwithCheckDate(RLcheckDate);
+    	RecentLiabilities.searchwithCheckDate(RecentLiabilities_checkDate);
     	RecentLiabilities.verifycheckDate();
     	RecentLiabilities.clickOnExporttoExcel();
-    	isFileDownloaded("RecentLiabilities_04150_20220928");
+    	isFileDownloaded("RecentLiabilities_04150_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -400,10 +400,10 @@ public class TC_AsureTaxPortal extends Baseclass{
     	dashboard.selectClientList();
     	dashboard.selectDoughNutsInc();
     	RecentLiabilitiesPage RecentLiabilities= new RecentLiabilitiesPage(driver);
-    	RecentLiabilities.searchwithEntryDate(RLEntryDate);
+    	RecentLiabilities.searchwithEntryDate(RecentLiabilities_EntryDate);
     	RecentLiabilities.verifyEntryDate();
     	RecentLiabilities.clickOnExporttoExcel();
-    	isFileDownloaded("RecentLiabilities_04150_20220928");
+    	isFileDownloaded("RecentLiabilities_04150_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -414,10 +414,10 @@ public class TC_AsureTaxPortal extends Baseclass{
     	dashboard.selectClientList();
     	dashboard.selectDoughNutsInc();
     	RecentLiabilitiesPage RecentLiabilities= new RecentLiabilitiesPage(driver);
-    	RecentLiabilities.searchwithAmount(RLAmount);
+    	RecentLiabilities.searchwithAmount(RecentLiabilities_Amount);
     	RecentLiabilities.verifyAmount();
     	RecentLiabilities.clickOnExporttoExcel();
-    	isFileDownloaded("RecentLiabilities_04150_20220928");
+    	isFileDownloaded("RecentLiabilities_04150_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -428,10 +428,10 @@ public class TC_AsureTaxPortal extends Baseclass{
     	dashboard.selectClientList();
     	dashboard.selectDoughNutsInc();
     	RecentLiabilitiesPage RecentLiabilities= new RecentLiabilitiesPage(driver);
-    	RecentLiabilities.searchwithStatus(RLStatus);
+    	RecentLiabilities.searchwithStatus(RecentLiabilities_Status);
     	RecentLiabilities.verifyStatus();
     	RecentLiabilities.clickOnExporttoExcel();
-    	isFileDownloaded("RecentLiabilities_04150_20220928");
+    	isFileDownloaded("RecentLiabilities_04150_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -442,11 +442,11 @@ public class TC_AsureTaxPortal extends Baseclass{
     	dashboard.selectClientList();
     	dashboard.selectDoughNutsInc();
     	RecentLiabilitiesPage RecentLiabilities= new RecentLiabilitiesPage(driver);
-    	RecentLiabilities.searchwithStatus(RLStatus);
+    	RecentLiabilities.searchwithStatus(RecentLiabilities_Status);
     	RecentLiabilities.clickOnRecentLiabilities();
     	RecentLiabilities.ValidateDescrptioninRL();
     	RecentLiabilities.clickOnExporttoExcel1();
-    	isFileDownloaded("RecentLiabilities_04150_20220928");
+    	isFileDownloaded("RecentLiabilities_587483_08_19_22_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -494,7 +494,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	TaxPackages.ValidateRtnPkg();
     	TaxPackages.clickOnqepkgDownload();
     	RecentLiabilitiesPage RecentLiabilities = new RecentLiabilitiesPage(driver);
-    	RecentLiabilities.returnMatchSikuliObject(qepkgdownloadedFile);
+    	
     }
     
     @Test(description = "Validate user can view the company details for DOUGH NUTS INC Client")
@@ -719,7 +719,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	Announcements.clickOnViewAll();
     	Announcements.searchwithAnnouncementName();
     	Announcements.clickOnExporttoExcel();
-    	isFileDownloaded("Announcements_20220928");
+    	isFileDownloaded("Announcements_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -734,7 +734,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	Announcements.clickOnViewAll();
     	Announcements.searchwithAnnouncementName();
     	Announcements.clickOnExporttoPdf();
-    	isFileDownloaded("Announcements_20220928");
+    	isFileDownloaded("Announcements_20221010.pdf");
     	DeleteFile();
     }
     
@@ -748,7 +748,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	UpcomingPayments.searchwithDuedate();
     	UpcomingPayments.verifyDuedate();
     	UpcomingPayments.clickOnExporttoExcel();
-    	isFileDownloaded("UpcomingPayments_04150_20220928");
+    	isFileDownloaded("UpcomingPayments_04150_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -762,7 +762,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	UpcomingPayments.searchwithAmount();
     	UpcomingPayments.verifyAmount();
     	UpcomingPayments.clickOnExporttoExcel();
-    	isFileDownloaded("UpcomingPayments_04150_20220928");
+    	isFileDownloaded("UpcomingPayments_04150_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -776,7 +776,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	UpcomingPayments.searchwithCount();
     	UpcomingPayments.verifyCount();
     	UpcomingPayments.clickOnExporttoExcel();
-    	isFileDownloaded("UpcomingPayments_04150_20220928");
+    	isFileDownloaded("UpcomingPayments_04150_20221010.xlsx");
     	DeleteFile();
     }
 
@@ -790,7 +790,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	UpcomingPayments.clickOnAmount96983();
     	UpcomingPayments.searchwithPayrollID();
     	UpcomingPayments.clickOnExporttoExcel1();
-    	isFileDownloaded("UpcomingPayments_04150_20220928");
+    	isFileDownloaded("UpcomingPayments_04150_10_31_22_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -805,7 +805,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	UpcomingPayments.searchwithAgencyID();
     	UpcomingPayments.verifyAgencyID();
     	UpcomingPayments.clickOnExporttoExcel1();
-    	isFileDownloaded("UpcomingPayments_04150_20220928");
+    	isFileDownloaded("UpcomingPaymen20221010_10_31_22_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -820,7 +820,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	UpcomingPayments.searchwithDescription();
     	UpcomingPayments.verifyDescription();
     	UpcomingPayments.clickOnExporttoExcel1();
-    	isFileDownloaded("UpcomingPayments_04150_20220928");
+    	isFileDownloaded("UpcomingPayments_04150_10_31_22_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -835,7 +835,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	UpcomingPayments.searchwithDuedate1();
     	UpcomingPayments.verifyDuedate1();
     	UpcomingPayments.clickOnExporttoExcel1();
-    	isFileDownloaded("UpcomingPayments_04150_20220928");
+    	isFileDownloaded("UpcomingPayments_04150_10_31_22_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -850,7 +850,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	UpcomingPayments.searchwithAmount1();
     	UpcomingPayments.verifyAmount1();
     	UpcomingPayments.clickOnExporttoExcel1();
-    	isFileDownloaded("UpcomingPayments_04150_20220928");
+    	isFileDownloaded("UpcomingPayments_04150_10_31_22_20221010.xlsx");
     	DeleteFile();
     	
     }
@@ -865,7 +865,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	FundingIssuesPage FundingIssues = new FundingIssuesPage(driver);
     	FundingIssues.searchwithPayrollID();
     	FundingIssues.clickOnExporttoExcel();
-    	isFileDownloaded("Funding Issues_04150_20220928");
+    	isFileDownloaded("Funding Issues_04150_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -880,7 +880,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	FundingIssues.searchwithAmount();
     	FundingIssues.verifyAmount();
     	FundingIssues.clickOnExporttoExcel();
-    	isFileDownloaded("Funding Issues_04150_20220928");
+    	isFileDownloaded("Funding Issues_04150_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -895,7 +895,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	FundingIssues.searchwithFundingDate();
     	FundingIssues.verifyFundingDueDate();
     	FundingIssues.clickOnExporttoExcel();
-    	isFileDownloaded("Funding Issues_04150_20220928");
+    	isFileDownloaded("Funding Issues_04150_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -910,7 +910,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	FundingIssues.searchwithReason();
     	FundingIssues.verifyReason();
     	FundingIssues.clickOnExporttoExcel();
-    	isFileDownloaded("Funding Issues_04150_20220928");
+    	isFileDownloaded("Funding Issues_04150_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -926,7 +926,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	RecentLiabilities.searchwithDescription();
     	RecentLiabilities.verifyDescription();
     	RecentLiabilities.clickOnExporttoExcel1();
-    	isFileDownloaded("RecentLiabilities_587483_08_19_22_20220928");
+    	isFileDownloaded("RecentLiabilities_587483_08_19_22_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -942,7 +942,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	RecentLiabilities.searchwithAmount1();
     	RecentLiabilities.verifyAmount1();
     	RecentLiabilities.clickOnExporttoExcel1();
-    	isFileDownloaded("RecentLiabilities_587483_08_19_22_20220928");
+    	isFileDownloaded("RecentLiabilities_587483_08_19_22_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -969,7 +969,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	PaymentIssuesPage PaymentIssues = new PaymentIssuesPage(driver);
     	PaymentIssues.searchwithPayrollID_BHBAKERY();
     	PaymentIssues.clickOnExporttoExcel();
-    	isFileDownloaded("Payments Issues_06500_20220928");
+    	isFileDownloaded("Payments Issues_06500_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -984,7 +984,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	PaymentIssues.searchwithAgencyID_BHBAKERY();
     	PaymentIssues.verifyAgencyID_BHBAKERY();
     	PaymentIssues.clickOnExporttoExcel();
-    	isFileDownloaded("Payments Issues_06500_20220928");
+    	isFileDownloaded("Payments Issues_06500_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -999,7 +999,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	PaymentIssues.searchwithDescription_BHBAKERY();
     	PaymentIssues.verifyDecription_BHBAKERY();
     	PaymentIssues.clickOnExporttoExcel();
-    	isFileDownloaded("Payments Issues_06500_20220928");
+    	isFileDownloaded("Payments Issues_06500_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -1015,7 +1015,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	PaymentIssues.searchwithDuedate_BHBAKERY();
     	PaymentIssues.verifyDueDate_BHBAKERY();
     	PaymentIssues.clickOnExporttoExcel();
-    	isFileDownloaded("Payments Issues_06500_20220928");
+    	isFileDownloaded("Payments Issues_06500_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -1030,7 +1030,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	PaymentIssues.searchwithAmount_BHBAKERY();
     	PaymentIssues.verifyAmount_BHBAKERY();
     	PaymentIssues.clickOnExporttoExcel();
-    	isFileDownloaded("Payments Issues_06500_20220928");
+    	isFileDownloaded("Payments Issues_06500_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -1045,7 +1045,7 @@ public class TC_AsureTaxPortal extends Baseclass{
     	PaymentIssues.searchwithReasoncode_BHBAKERY();
     	PaymentIssues.verifyReasoncode_BHBAKERY();
     	PaymentIssues.clickOnExporttoExcel();
-    	isFileDownloaded("Payments Issues_06500_20220928");
+    	isFileDownloaded("Payments Issues_06500_20221010.xlsx");
     	DeleteFile();
     }
     
@@ -1304,7 +1304,7 @@ public void TC_BHBAKERY_75_TIBERIUM_SYSTEMS_User_downloads_the_Payment_issues_Re
 	PaymentIssuesPage PaymentIssues = new PaymentIssuesPage(driver);
 	PaymentIssues.searchwithPayrollID_TIBERIUM();
 	PaymentIssues.clickOnExporttoExcel();
-	isFileDownloaded("Payments Issues_05830_20220928");
+	isFileDownloaded("Payments Issues_05830_20221010.xlsx");
 	DeleteFile();
 }
   
@@ -1321,7 +1321,7 @@ public void TC_BHBAKERY_75_TIBERIUM_SYSTEMS_User_downloads_the_Payment_issues_Re
 	PaymentIssues.searchwithAgencyID_TIBERIUM();
 	PaymentIssues.verifyAgencyID_TIBERIUM();
 	PaymentIssues.clickOnExporttoExcel();
-	isFileDownloaded("Payments Issues_05830_20220928");
+	isFileDownloaded("Payments Issues_05830_20221010.xlsx");
 	DeleteFile();
 }
   
@@ -1338,7 +1338,7 @@ public void TC_BHBAKERY_77_TIBERIUM_SYSTEMS_User_downloads_the_Payment_issues_Re
 	PaymentIssues.searchwithDescription_TIBERIUM();
 	PaymentIssues.verifyDecription_TIBERIUM();
 	PaymentIssues.clickOnExporttoExcel();
-	isFileDownloaded("Payments Issues_05830_20220928");
+	isFileDownloaded("Payments Issues_05830_20221010.xlsx");
 	DeleteFile();
 }
   
@@ -1355,7 +1355,7 @@ public void TC_BHBAKERY_77_TIBERIUM_SYSTEMS_User_downloads_the_Payment_issues_Re
 	PaymentIssues.searchwithDuedate_TIBERIUM();
 	PaymentIssues.verifyDueDate_TIBERIUM();
 	PaymentIssues.clickOnExporttoExcel();
-	isFileDownloaded("Payments Issues_05830_20220928");
+	isFileDownloaded("Payments Issues_05830_20221010.xlsx");
 	DeleteFile();
   }
   
@@ -1372,7 +1372,7 @@ public void TC_BHBAKERY_77_TIBERIUM_SYSTEMS_User_downloads_the_Payment_issues_Re
 	PaymentIssues.searchwithAmount_TIBERIUM();
 	PaymentIssues.verifyAmount_TIBERIUM();
 	PaymentIssues.clickOnExporttoExcel();
-	isFileDownloaded("Payments Issues_05830_20220928");
+	isFileDownloaded("Payments Issues_05830_20221010.xlsx");
 	DeleteFile();
   }
   
@@ -1389,7 +1389,7 @@ public void TC_BHBAKERY_77_TIBERIUM_SYSTEMS_User_downloads_the_Payment_issues_Re
 	PaymentIssues.searchwithReasoncode();
 	PaymentIssues.verifyReasoncode();
 	PaymentIssues.clickOnExporttoExcel();
-	isFileDownloaded("Payments Issues_05830_20220928");
+	isFileDownloaded("Payments Issues_05830_20221010.xlsx");
 	DeleteFile();
   }
   
@@ -1632,6 +1632,47 @@ public void TC_BHBAKERY_77_TIBERIUM_SYSTEMS_User_downloads_the_Payment_issues_Re
   	TaxAgencies.ValidateDoughNutsAcceptAppliedFor_No();
   	TaxAgencies.CloseAgency();
   }
-  
+    
+    @Test(description = "Validate User can sort with Inactive Tax Agencies")
+    public void TC_92_DOUGH_NUTS_Validate_User_can_sort_with_Inactive_Tax_Agencies() throws InterruptedException {
+    	rep=Reports.InitializeReport();
+    	DashboardPage dashboard= new DashboardPage(driver);
+    	dashboard.selectClientList();
+    	dashboard.selectDoughNutsInc();
+    	HomePage Home=new HomePage(driver);
+    	Home.clickOnProfile();
+    	TaxAgenciesPage TaxAgencies = new TaxAgenciesPage(driver);
+    	TaxAgencies.clickonStatusDropdown();
+    	TaxAgencies.clickonInactiveStatus();
+    	TaxAgencies.ValidateinactiveStatus();
+    }
+    
+    @Test(description = "Validate User can sort with Active Tax Agencies")
+    public void TC_93_DOUGH_NUTS_Validate_User_can_sort_with_Active_Tax_Agencies() throws InterruptedException {
+    	rep=Reports.InitializeReport();
+    	DashboardPage dashboard= new DashboardPage(driver);
+    	dashboard.selectClientList();
+    	dashboard.selectDoughNutsInc();
+    	HomePage Home=new HomePage(driver);
+    	Home.clickOnProfile();
+    	TaxAgenciesPage TaxAgencies = new TaxAgenciesPage(driver);
+    	TaxAgencies.clickonStatusDropdown();
+    	TaxAgencies.clickonActiveStatus();
+    	TaxAgencies.ValidateActiveStatus();
+    }
+    
+    @Test(description = "Validate User can sort with All Tax Agencies")
+    public void TC_94_DOUGH_NUTS_Validate_User_can_sort_with_All_Tax_Agencies() throws InterruptedException {
+    	rep=Reports.InitializeReport();
+    	DashboardPage dashboard= new DashboardPage(driver);
+    	dashboard.selectClientList();
+    	dashboard.selectDoughNutsInc();
+    	HomePage Home=new HomePage(driver);
+    	Home.clickOnProfile();
+    	TaxAgenciesPage TaxAgencies = new TaxAgenciesPage(driver);
+    	TaxAgencies.clickonStatusDropdown();
+    	TaxAgencies.clickonAllStatus();
+    	TaxAgencies.ValidateAllStatus();
+    }
   
 }

@@ -79,7 +79,7 @@ public class AlertsPage extends Baseclass{
 public void searchwithActivateFromdate() throws InterruptedException {
 		
 		try {
-			Search.sendKeys(ALActiveFromDate);
+			Search.sendKeys(Alerts_ActiveFromDate);
 			
 		} catch (StaleElementReferenceException e) {
 	        System.out.println(Search +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
@@ -97,7 +97,7 @@ public void searchwithActivateFromdate() throws InterruptedException {
 public void searchwithAlertName() throws InterruptedException {
 	
 	try {
-		Search.sendKeys(ALAlertName);
+		Search.sendKeys(Alerts_AlertName);
 		
 	} catch (StaleElementReferenceException e) {
         System.out.println(Search +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
@@ -115,7 +115,7 @@ public void searchwithAlertName() throws InterruptedException {
 public void searchwithAlertText() throws InterruptedException {
 	
 	try {
-		Search.sendKeys(ALAlertText);
+		Search.sendKeys(Alerts_AlertText);
 		
 	} catch (StaleElementReferenceException e) {
         System.out.println(Search +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
@@ -169,7 +169,7 @@ public void clickOnExporttoPdf() throws InterruptedException {
 public void verifyActiveFromDate() throws InterruptedException {
 	try {
 		String btext= ActivateFromdate.getText();
-		assertEquals(btext, ALActiveFromDate);
+		assertEquals(btext, Alerts_ActiveFromDate);
 	} catch (StaleElementReferenceException e) {
         System.out.println(ActivateFromdate +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
         assertTrue(false, "Activate From date is not verified in Alerts Page");
@@ -186,7 +186,7 @@ public void verifyActiveFromDate() throws InterruptedException {
 public void verifyAlertName() throws InterruptedException {
 	try {
 		String btext= AlertName.getText();
-		assertEquals(btext, ALAlertName);
+		assertEquals(btext, Alerts_AlertName);
 	} catch (StaleElementReferenceException e) {
         System.out.println(AlertName +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
         assertTrue(false, "Alert Name is not verified in Alerts Page");
@@ -203,7 +203,7 @@ public void verifyAlertName() throws InterruptedException {
 public void verifyAlertText() throws InterruptedException {
 	try {
 		String btext= AlertText.getText();
-		assertEquals(btext, ALAlertText);
+		assertEquals(btext, Alerts_AlertText);
 	} catch (StaleElementReferenceException e) {
         System.out.println(AlertText +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
         assertTrue(false, "Alert Text is not verified in Alerts Page");

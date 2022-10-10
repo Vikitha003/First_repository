@@ -1,7 +1,9 @@
 package com.PTMWeb.pages;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
@@ -31,6 +33,25 @@ public class TaxAgenciesPage extends Baseclass{
 	
 	@FindBy(xpath="//span[@class='k-icon k-button-icon k-i-pdf']")
 	WebElement pdf;
+	
+	@FindBy(xpath="//span[@class='k-input-value-text']")
+	WebElement statusFilter;
+	
+	@FindBy(xpath="//span[contains(@class,'k-list-item-text') and text()='All']")
+	WebElement All;
+	
+	@FindBy(xpath="//span[contains(@class,'k-list-item-text') and text()='Inactive']")
+	WebElement Inactive;
+	
+	
+	@FindBy(xpath="//div[@class='k-grid-container']//div/div/table/tbody/tr/td[8]")
+	WebElement Statuscheck;
+	
+	@FindBy(xpath="//div[@class='k-grid-container']//div/div/table/tbody/tr[2]/td[8]")
+	WebElement AllStatuscheck;
+	
+	@FindBy(xpath="//span[contains(@class,'k-list-item-text') and text()='Active']")
+	WebElement Active;
 	
 	@FindBy(xpath = "//span[text()='AZ Job Training Tax']")
 	WebElement AZJobTrainingTax;
@@ -266,7 +287,8 @@ public class TaxAgenciesPage extends Baseclass{
 	public void searchwithAgencyID() throws InterruptedException {
 		
 		try {
-				
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollBy(0,250)");
 				Search.sendKeys(TAAgencyID);
 			
 		} catch (StaleElementReferenceException e) {
@@ -282,7 +304,8 @@ public class TaxAgenciesPage extends Baseclass{
 	public void clickOnAgencyID_FUTA() throws InterruptedException {
 		
 		try {
-				
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollBy(0,250)");	
 			FUTA.click();
 			
 		} catch (StaleElementReferenceException e) {
@@ -298,7 +321,8 @@ public class TaxAgenciesPage extends Baseclass{
 public void clickOnAgencyID_IRS() throws InterruptedException {
 		
 		try {
-				
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollBy(0,250)");	
 			IRS941.click();
 			
 		} catch (StaleElementReferenceException e) {
@@ -314,7 +338,8 @@ public void clickOnAgencyID_IRS() throws InterruptedException {
 	public void clickOnAgencyID_AZSUI() throws InterruptedException {
 		
 		try {
-				
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollBy(0,250)");	
 			AZJobTrainingTax.click();
 			
 		} catch (StaleElementReferenceException e) {
@@ -330,7 +355,8 @@ public void clickOnAgencyID_IRS() throws InterruptedException {
 public void clickOnAgencyID_AZSUI1() throws InterruptedException {
 		
 		try {
-				
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollBy(0,250)");	
 			AZSUI.click();
 			
 		} catch (StaleElementReferenceException e) {
@@ -346,7 +372,8 @@ public void clickOnAgencyID_AZSUI1() throws InterruptedException {
 	public void clickOnAgencyID_AZSW() throws InterruptedException {
 		
 		try {
-				
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollBy(0,250)");	
 			AZSW.click();
 			
 		} catch (StaleElementReferenceException e) {
@@ -362,7 +389,8 @@ public void clickOnAgencyID_AZSUI1() throws InterruptedException {
 public void clickOnAgencyID_TXSUI() throws InterruptedException {
 		
 		try {
-				
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollBy(0,250)");	
 			TXSUI.click();
 			
 		} catch (StaleElementReferenceException e) {
@@ -378,7 +406,8 @@ public void clickOnAgencyID_TXSUI() throws InterruptedException {
 	public void clickOnAgencyID_TXREPLEN() throws InterruptedException {
 	
 	try {
-			
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,250)");	
 		TXREPLEN.click();
 		
 	} catch (StaleElementReferenceException e) {
@@ -394,7 +423,8 @@ public void clickOnAgencyID_TXSUI() throws InterruptedException {
 	public void clickOnAgencyID_COSUI() throws InterruptedException {
 		
 		try {
-				
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollBy(0,250)");	
 			COSUI.click();
 			
 		} catch (StaleElementReferenceException e) {
@@ -410,7 +440,8 @@ public void clickOnAgencyID_TXSUI() throws InterruptedException {
 	public void clickOnFrequencyType_COWEEK3DAY() throws InterruptedException {
 		
 		try {
-				
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollBy(0,250)");	
 			COWEEK3DAY.click();
 			
 		} catch (StaleElementReferenceException e) {
@@ -427,7 +458,8 @@ public void clickOnAgencyID_TXSUI() throws InterruptedException {
 	public void searchwithDescription() throws InterruptedException {
 		
 		try {
-				
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollBy(0,250)");
 				Search.sendKeys(TADescription);
 			
 		} catch (StaleElementReferenceException e) {
@@ -443,7 +475,8 @@ public void clickOnAgencyID_TXSUI() throws InterruptedException {
 	public void searchwithMainAgencyID() throws InterruptedException {
 	
 	try {
-			
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,250)");
 			Search.sendKeys(TAMAinagencyID);
 		
 	} catch (StaleElementReferenceException e) {
@@ -459,7 +492,8 @@ public void clickOnAgencyID_TXSUI() throws InterruptedException {
 	public void searchwithMainAgencyID_TIBERIUMSYSTEMS() throws InterruptedException {
 		
 		try {
-				
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollBy(0,250)");
 				Search.sendKeys(TAMainAgencyID_TIBERIUMSYSTEMS);
 			
 		} catch (StaleElementReferenceException e) {
@@ -475,7 +509,8 @@ public void clickOnAgencyID_TXSUI() throws InterruptedException {
 	public void searchwithClientTaxID() throws InterruptedException {
 	
 	try {
-			
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,250)");
 			Search.sendKeys(TAClientTaxID);
 		
 	} catch (StaleElementReferenceException e) {
@@ -491,7 +526,8 @@ public void clickOnAgencyID_TXSUI() throws InterruptedException {
 	public void searchwithFrequencyType() throws InterruptedException {
 	
 	try {
-			
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,250)");
 			Search.sendKeys(TAFrequencyType);
 		
 	} catch (StaleElementReferenceException e) {
@@ -507,7 +543,8 @@ public void clickOnAgencyID_TXSUI() throws InterruptedException {
 	public void searchwithFrequencyType_FEDSWQREC() throws InterruptedException {
 		
 		try {
-				
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollBy(0,250)");
 				Search.sendKeys(TAFrequencyTypeFEDSWQREC);
 			
 		} catch (StaleElementReferenceException e) {
@@ -523,7 +560,8 @@ public void clickOnAgencyID_TXSUI() throws InterruptedException {
 	public void searchwithFrequency() throws InterruptedException {
 	
 	try {
-			
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,250)");
 			Search.sendKeys(TAFrequency);
 		
 	} catch (StaleElementReferenceException e) {
@@ -539,7 +577,8 @@ public void clickOnAgencyID_TXSUI() throws InterruptedException {
 	public void searchwithTaxRate() throws InterruptedException {
 	
 	try {
-			
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,250)");
 			Search.sendKeys(TATaxRate);
 		
 	} catch (StaleElementReferenceException e) {
@@ -554,7 +593,8 @@ public void clickOnAgencyID_TXSUI() throws InterruptedException {
 	public void searchwithTaxRate02() throws InterruptedException {
 		
 		try {
-				
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollBy(0,250)");
 				Search.sendKeys(TATaxRate02);
 			
 		} catch (StaleElementReferenceException e) {
@@ -570,7 +610,8 @@ public void clickOnAgencyID_TXSUI() throws InterruptedException {
 public void searchwithTaxRate118() throws InterruptedException {
 		
 		try {
-				
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollBy(0,250)");
 				Search.sendKeys(TATaxRate_TIBERIUMSYSTEMS);
 			
 		} catch (StaleElementReferenceException e) {
@@ -586,7 +627,8 @@ public void searchwithTaxRate118() throws InterruptedException {
 	public void searchwithStatus() throws InterruptedException {
 		
 		try {
-				
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollBy(0,250)");
 				Search.sendKeys(TAStatus);
 			
 		} catch (StaleElementReferenceException e) {
@@ -1654,6 +1696,117 @@ public void searchwithTaxRate118() throws InterruptedException {
 		Thread.sleep(3000);
 	}
 	
+	public void clickonStatusDropdown() throws InterruptedException {
+		try {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollBy(0,250)");
+			SetHighlight(statusFilter);
+			statusFilter.click();
+				
+		} catch (StaleElementReferenceException e) {
+            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+        } catch (NoSuchElementException e) {
+            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+        } catch (Exception e) {
+            System.out.println("unable to click.." + e);
+        }
+		Thread.sleep(3000);
+	}
 	
+	public void clickonInactiveStatus() throws InterruptedException {
+		try {
+			SetHighlight(Inactive);
+			Inactive.click();
+				
+		} catch (StaleElementReferenceException e) {
+            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+        } catch (NoSuchElementException e) {
+            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+        } catch (Exception e) {
+            System.out.println("unable to click.." + e);
+        }
+		Thread.sleep(3000);
+	}
+	
+	public void clickonActiveStatus() throws InterruptedException {
+		try {
+			SetHighlight(Active);
+			Active.click();
+				
+		} catch (StaleElementReferenceException e) {
+            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+        } catch (NoSuchElementException e) {
+            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+        } catch (Exception e) {
+            System.out.println("unable to click.." + e);
+        }
+		Thread.sleep(3000);
+	}
+	
+	public void clickonAllStatus() throws InterruptedException {
+		try {
+			SetHighlight(All);
+			All.click();
+				
+		} catch (StaleElementReferenceException e) {
+            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+        } catch (NoSuchElementException e) {
+            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+        } catch (Exception e) {
+            System.out.println("unable to click.." + e);
+        }
+		Thread.sleep(3000);
+	}
+	
+	public void ValidateinactiveStatus() throws InterruptedException {
+		try {
+			String btext= Statuscheck.getText();
+			assertEquals(btext, "Inactive");
+			assertTrue(true, "Inactive agencies are displayed in the table");
+				
+		} catch (StaleElementReferenceException e) {
+            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+        } catch (NoSuchElementException e) {
+            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+        } catch (Exception e) {
+            System.out.println("unable to click.." + e);
+        }
+		Thread.sleep(3000);
+	}
+	
+	public void ValidateActiveStatus() throws InterruptedException {
+		try {
+			String btext= Statuscheck.getText();
+			assertEquals(btext, "Active");
+			assertTrue(true, "Active agencies are displayed in the table");
+				
+		} catch (StaleElementReferenceException e) {
+            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+        } catch (NoSuchElementException e) {
+            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+        } catch (Exception e) {
+            System.out.println("unable to click.." + e);
+        }
+		Thread.sleep(3000);
+	}
+	
+	public void ValidateAllStatus() throws InterruptedException {
+		try {
+			String btext= Statuscheck.getText();
+			assertEquals(btext, "Active");
+			
+			String btex1t= AllStatuscheck.getText();
+			assertEquals(btex1t, "Inactive");
+			assertTrue(true, "Both Active and Inactive agencies are displayed in the table");
+				
+		} catch (StaleElementReferenceException e) {
+            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+        } catch (NoSuchElementException e) {
+            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+        } catch (Exception e) {
+            System.out.println("unable to click.." + e);
+        }
+		Thread.sleep(3000);
+	}
 
 }

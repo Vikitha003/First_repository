@@ -1,5 +1,7 @@
 package com.PTMWeb.pages;
 
+import static org.testng.Assert.assertTrue;
+
 import java.util.Set;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -47,10 +49,13 @@ public class AnnouncementsPage extends Baseclass{
 			
 		} catch (StaleElementReferenceException e) {
             System.out.println(Search+"Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Clear the search");
         } catch (NoSuchElementException e) {
             System.out.println(Search+"Element" + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Clear the search");
         } catch (Exception e) {
             System.out.println("unable to click.."+Search + e);
+            assertTrue(false, "Unable to Clear the search");
         }
 		Thread.sleep(3000);
 	}
@@ -62,10 +67,13 @@ public class AnnouncementsPage extends Baseclass{
 			
 		} catch (StaleElementReferenceException e) {
 	        System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+	        assertTrue(false, "Unable to click on close button");
 	    } catch (NoSuchElementException e) {
 	        System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+	        assertTrue(false, "Unable to click on close button");
 	    } catch (Exception e) {
 	        System.out.println("unable to click.." + e);
+	        assertTrue(false, "Unable to click on close button");
 	    }
 		Thread.sleep(3000);
 	}
@@ -77,11 +85,14 @@ public class AnnouncementsPage extends Baseclass{
 				ViewAll.click();
 			
 		} catch (StaleElementReferenceException e) {
-	        System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+	        System.out.println(ViewAll + " is not visble to click.." + "- StaleElementReferenceException");
+	        assertTrue(false, "Unable to click on View All button");
 	    } catch (NoSuchElementException e) {
-	        System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+	        System.out.println(ViewAll + " is not visble to click.." + "-NosuchElementException");
+	        assertTrue(false, "Unable to click on View All button");
 	    } catch (Exception e) {
-	        System.out.println("unable to click.." + e);
+	        System.out.println("unable to click.."+ ViewAll + e);
+	        assertTrue(false, "Unable to click on View All button");
 	    }
 		Thread.sleep(3000);
 	}
@@ -93,10 +104,13 @@ public void searchwithAnnouncementName() throws InterruptedException {
 			
 		} catch (StaleElementReferenceException e) {
             System.out.println(Search + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to search with Announcement Name");
         } catch (NoSuchElementException e) {
             System.out.println(Search + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to search with Announcement Name");
         } catch (Exception e) {
             System.out.println("unable to click.."+Search+ e);
+            assertTrue(false, "Unable to search with Announcement Name");
         }
 		Thread.sleep(3000);
 	}
@@ -107,11 +121,14 @@ public void clickOnExporttoExcel() throws InterruptedException {
 		Excel.click();
 		
 	} catch (StaleElementReferenceException e) {
-        System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+        System.out.println( Excel + " is not visble to click.." + "- StaleElementReferenceException");
+        assertTrue(false, "Unable to click on Export to Excel button");
     } catch (NoSuchElementException e) {
-        System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+        System.out.println(Excel  + " is not visble to click.." + "-NosuchElementException");
+        assertTrue(false, "Unable to click on Export to Excel button");
     } catch (Exception e) {
-        System.out.println("unable to click.." + e);
+        System.out.println("unable to click.."+ Excel + e);
+        assertTrue(false, "Unable to click on Export to Excel button");
     }
 	Thread.sleep(5000);
 }
@@ -122,11 +139,14 @@ public void clickOnExporttoPdf() throws InterruptedException {
 			pdf.click();
 		}
 	} catch (StaleElementReferenceException e) {
-        System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+        System.out.println(pdf + " is not visble to click.." + "- StaleElementReferenceException");
+        assertTrue(false, "Unable to click on Export to Pdf button");
     } catch (NoSuchElementException e) {
-        System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+        System.out.println(pdf + " is not visble to click.." + "-NosuchElementException");
+        assertTrue(false, "Unable to click on Export to Pdf button");
     } catch (Exception e) {
-        System.out.println("unable to click.." + e);
+        System.out.println("unable to click.." + pdf + e);
+        assertTrue(false, "Unable to click on Export to Pdf button");
     }
 	Thread.sleep(3000);
 }

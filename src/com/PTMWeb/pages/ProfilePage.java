@@ -131,11 +131,14 @@ public class ProfilePage extends Baseclass{
 			}
 				
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(DoughNutsLegalName + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Validate Legal Name 'Dough Nuts Inc'");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(DoughNutsLegalName + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Validate Legal Name 'Dough Nuts Inc'");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.."+ DoughNutsLegalName + e);
+            assertTrue(false, "Unable to Validate Legal Name 'Dough Nuts Inc'");
         }
 		Thread.sleep(3000);
 	}
@@ -148,11 +151,14 @@ public class ProfilePage extends Baseclass{
 			}
 				
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(BHBakeryLegalName + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Validate Legal Name 'BH Bakery Inc.'");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(BHBakeryLegalName + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Validate Legal Name 'BH Bakery Inc.'");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." + BHBakeryLegalName + e);
+            assertTrue(false, "Unable to Validate Legal Name 'BH Bakery Inc.'");
         }
 		Thread.sleep(3000);
 	}
@@ -165,11 +171,14 @@ public class ProfilePage extends Baseclass{
 			}
 				
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(TiBERIUMSYSTEMSLegalName + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Validate Legal Name 'Tiberium Systems LLC'");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(TiBERIUMSYSTEMSLegalName + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Validate Legal Name 'Tiberium Systems LLC'");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." + TiBERIUMSYSTEMSLegalName + e);
+            assertTrue(false, "Unable to Validate Legal Name 'Tiberium Systems LLC'");
         }
 		Thread.sleep(3000);
 	}
@@ -180,15 +189,17 @@ public class ProfilePage extends Baseclass{
 			if(DoughNutsDBA.isDisplayed()) {
 				assertTrue(true);
 			}
-//			String btext= DoughNutsDBA.getText();
-//			assertEquals(btext,DoughNutsDBA_1);
+
 				
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(DoughNutsDBA + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Validate DBA 'Dough Nuts Inc.'");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(DoughNutsDBA + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Validate DBA 'Dough Nuts Inc.'");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.."+ DoughNutsDBA + e);
+            assertTrue(false, "Unable to Validate DBA 'Dough Nuts Inc.'");
         }
 		Thread.sleep(3000);
 	}
@@ -201,11 +212,14 @@ public class ProfilePage extends Baseclass{
 			}
 				
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(BHBakeryDBA + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Validate DBA 'Bh Bakery Inc.'");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(BHBakeryDBA + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Validate DBA 'Bh Bakery Inc.'");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." + BHBakeryDBA + e);
+            assertTrue(false, "Unable to Validate DBA 'Bh Bakery Inc.'");
         }
 		Thread.sleep(3000);
 	}
@@ -218,11 +232,14 @@ public class ProfilePage extends Baseclass{
 			}
 				
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(TIBERIUMSYSTEMSDBA + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Validate DBA  'Tiberium Systems Llc'");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(TIBERIUMSYSTEMSDBA + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Validate DBA  'Tiberium Systems Llc'");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." + TIBERIUMSYSTEMSDBA + e);
+            assertTrue(false, "Unable to Validate DBA  'Tiberium Systems Llc'");
         }
 		Thread.sleep(3000);
 	}
@@ -233,15 +250,16 @@ public class ProfilePage extends Baseclass{
 			if(DoughNutsAddress.isDisplayed()) {
 				assertTrue(true);
 			}
-//			String btext= DoughNutsAddress.getText();
-//			assertEquals(btext,DoughNutsAddress_1);
 				
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(DoughNutsAddress + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Validate Address '123 City Drive Irvine, CA 92602' ");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(DoughNutsAddress + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Validate Address '123 City Drive Irvine, CA 92602' ");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.."+ DoughNutsAddress + e);
+            assertTrue(false, "Unable to Validate Address '123 City Drive Irvine, CA 92602' ");
         }
 		Thread.sleep(3000);
 	}
@@ -254,11 +272,14 @@ public class ProfilePage extends Baseclass{
 			}
 				
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(BHBakeryAddress + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Validate Address '321 City Drive Irvine, CA 92614' ");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(BHBakeryAddress + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Validate Address '321 City Drive Irvine, CA 92614' ");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." + BHBakeryAddress + e);
+            assertTrue(false, "Unable to Validate Address '321 City Drive Irvine, CA 92614' ");
         }
 		Thread.sleep(3000);
 	}
@@ -271,11 +292,14 @@ public class ProfilePage extends Baseclass{
 			}
 				
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(TIBERIUMSYSTEMSAddress + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Validate Address '321 Town Circle Irvine, CA 92620' ");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(TIBERIUMSYSTEMSAddress + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Validate Address '321 Town Circle Irvine, CA 92620' ");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." + TIBERIUMSYSTEMSAddress + e);
+            assertTrue(false, "Unable to Validate Address '321 Town Circle Irvine, CA 92620' ");
         }
 		Thread.sleep(3000);
 	}
@@ -287,15 +311,16 @@ public class ProfilePage extends Baseclass{
 			if(DoughNutsFEIN.isDisplayed()) {
 				assertTrue(true);
 			}
-//			String btext= DoughNutsFEIN.getText();
-//			assertEquals(btext,DoughNutsFEIN_1);
 				
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(DoughNutsFEIN + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Validate FEIN '12-3456789' ");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(DoughNutsFEIN + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Validate FEIN '12-3456789' ");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." + DoughNutsFEIN + e);
+            assertTrue(false, "Unable to Validate FEIN '12-3456789' ");
         }
 		Thread.sleep(3000);
 	}
@@ -309,11 +334,14 @@ public class ProfilePage extends Baseclass{
 			}
 				
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(BHBakeryFEIN + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Validate FEIN '12-3456789' ");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(BHBakeryFEIN + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Validate FEIN '12-3456789' ");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.."+ BHBakeryFEIN + e);
+            assertTrue(false, "Unable to Validate FEIN '12-3456789' ");
         }
 		Thread.sleep(3000);
 	}
@@ -327,11 +355,14 @@ public class ProfilePage extends Baseclass{
 			}
 				
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(TIBERIUMSYSTEMSFEIN + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Validate FEIN '12-3456789' ");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(TIBERIUMSYSTEMSFEIN + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Validate FEIN '12-3456789' ");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." + TIBERIUMSYSTEMSFEIN + e);
+            assertTrue(false, "Unable to Validate FEIN '12-3456789' ");
         }
 		Thread.sleep(3000);
 	}
@@ -342,15 +373,16 @@ public class ProfilePage extends Baseclass{
 			if(DoughNutsClientID.isDisplayed()) {
 				assertTrue(true);
 			}
-//			String btext= DoughNutsClientID.getText();
-//			assertEquals(btext,DoughNutsClientID_1);
 				
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(DoughNutsClientID + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Validate client id 'APTM0001' ");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(DoughNutsClientID + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Validate client id 'APTM0001' ");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." + DoughNutsClientID + e);
+            assertTrue(false, "Unable to Validate client id 'APTM0001' ");
         }
 		Thread.sleep(3000);
 	}
@@ -363,11 +395,14 @@ public class ProfilePage extends Baseclass{
 			}
 				
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(BHBakeryClientID + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Validate client id 'APTM0002' ");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(BHBakeryClientID + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Validate client id 'APTM0002' ");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.."+ BHBakeryClientID + e);
+            assertTrue(false, "Unable to Validate client id 'APTM0002' ");
         }
 		Thread.sleep(3000);
 	}
@@ -380,11 +415,14 @@ public class ProfilePage extends Baseclass{
 			}
 				
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(TIBERIUMSYSTEMSClientID + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Validate client id 'APTM0003' ");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(TIBERIUMSYSTEMSClientID + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Validate client id 'APTM0003' ");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." + TIBERIUMSYSTEMSClientID + e);
+            assertTrue(false, "Unable to Validate client id 'APTM0003' ");
         }
 		Thread.sleep(3000);
 	}
@@ -395,15 +433,17 @@ public class ProfilePage extends Baseclass{
 			if(DoughNutsPayrollID.isDisplayed()) {
 				assertTrue(true);
 			}
-//			String btext= DoughNutsPayrollID.getText();
-//			assertEquals(btext,DoughNutsPayrollID_1);
+
 				
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(DoughNutsPayrollID + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Validate Payroll id '04150' ");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(DoughNutsPayrollID + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Validate Payroll id '04150' ");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." + DoughNutsPayrollID + e);
+            assertTrue(false, "Unable to Validate Payroll id '04150' ");
         }
 		Thread.sleep(3000);
 	}
@@ -416,11 +456,14 @@ public class ProfilePage extends Baseclass{
 			}
 				
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(BHBakeryPayrollID + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Validate Payroll id '06500' ");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(BHBakeryPayrollID + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Validate Payroll id '06500' ");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." + BHBakeryPayrollID + e);
+            assertTrue(false, "Unable to Validate Payroll id '06500' ");
         }
 		Thread.sleep(3000);
 	}
@@ -433,11 +476,14 @@ public class ProfilePage extends Baseclass{
 			}
 				
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(TIBERIUMSYSTEMSPayrollID + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Validate Payroll id '05830' ");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(TIBERIUMSYSTEMSPayrollID + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Validate Payroll id '05830' ");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." + TIBERIUMSYSTEMSPayrollID + e);
+            assertTrue(false, "Unable to Validate Payroll id '05830' ");
         }
 		Thread.sleep(3000);
 	}
@@ -450,11 +496,14 @@ public class ProfilePage extends Baseclass{
 			assertEquals(btext,NSFHoldStatus_BHBAKERY);
 				
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(BHBAKERYNSFHold + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Validate NSF Hold 'No' ");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(BHBAKERYNSFHold + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Validate NSF Hold 'No' ");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.."+ BHBAKERYNSFHold + e);
+            assertTrue(false, "Unable to Validate NSF Hold 'No' ");
         }
 		Thread.sleep(3000);
 	}
@@ -466,11 +515,14 @@ public class ProfilePage extends Baseclass{
 			assertEquals(btext,NSFHoldStatus);
 				
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(DoughNutsNSFHold + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Validate NSF Hold 'Yes' ");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(DoughNutsNSFHold + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Validate NSF Hold 'Yes' ");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.."+ DoughNutsNSFHold + e);
+            assertTrue(false, "Unable to Validate NSF Hold 'Yes' ");
         }
 		Thread.sleep(3000);
 	}
@@ -482,11 +534,14 @@ public class ProfilePage extends Baseclass{
 			assertEquals(btext,NSFHoldStatus);
 				
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(DoughNutsNSFHold + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Validate NSF Hold 'Yes' ");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(DoughNutsNSFHold + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Validate NSF Hold 'Yes' ");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.."+ DoughNutsNSFHold + e);
+            assertTrue(false, "Unable to Validate NSF Hold 'Yes' ");
         }
 		Thread.sleep(3000);
 	}
@@ -499,11 +554,14 @@ public class ProfilePage extends Baseclass{
 			}
 				
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(DoughNutsContactName + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Validate Contact 'Tom Edison' ");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(DoughNutsContactName + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Validate Contact 'Tom Edison' ");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." + DoughNutsContactName + e);
+            assertTrue(false, "Unable to Validate Contact 'Tom Edison' ");
         }
 		Thread.sleep(3000);
 	}
@@ -516,11 +574,14 @@ public class ProfilePage extends Baseclass{
 			}
 				
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(BHBakeryContactName + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Validate Contact 'Michael' ");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(BHBakeryContactName + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Validate Contact 'Michael' ");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." + BHBakeryContactName + e);
+            assertTrue(false, "Unable to Validate Contact 'Michael' ");
         }
 		Thread.sleep(3000);
 	}
@@ -533,11 +594,14 @@ public class ProfilePage extends Baseclass{
 			}
 				
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(TIBERIUMSYSTEMSContactName + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Validate Contact 'David' ");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(TIBERIUMSYSTEMSContactName + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Validate Contact 'David' ");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." + TIBERIUMSYSTEMSContactName + e);
+            assertTrue(false, "Unable to Validate Contact 'David' ");
         }
 		Thread.sleep(3000);
 	}
@@ -550,11 +614,14 @@ public class ProfilePage extends Baseclass{
 			}
 				
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(DoughNutsPhonenumber + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Validate Phone '(714) 555-1234' ");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(DoughNutsPhonenumber + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Validate Phone '(714) 555-1234' ");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." + DoughNutsPhonenumber + e);
+            assertTrue(false, "Unable to Validate Phone '(714) 555-1234' ");
         }
 		Thread.sleep(3000);
 	}
@@ -567,11 +634,14 @@ public class ProfilePage extends Baseclass{
 			}
 				
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(BHBakeryPhonenumber + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Validate Phone '(714) 555-7123' ");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(BHBakeryPhonenumber + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Validate Phone '(714) 555-7123' ");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." + BHBakeryPhonenumber + e);
+            assertTrue(false, "Unable to Validate Phone '(714) 555-7123' ");
         }
 		Thread.sleep(3000);
 	}
@@ -584,11 +654,14 @@ public class ProfilePage extends Baseclass{
 			}
 				
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(TIBERIUMSYSTEMSPhonenumber + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Validate Phone '(949) 555-5100' ");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(TIBERIUMSYSTEMSPhonenumber + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Validate Phone '(949) 555-5100' ");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." + TIBERIUMSYSTEMSPhonenumber + e);
+            assertTrue(false, "Unable to Validate Phone '(949) 555-5100' ");
         }
 		Thread.sleep(3000);
 	}
@@ -601,11 +674,14 @@ public class ProfilePage extends Baseclass{
 			}
 				
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(DoughNutsFax + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Validate Fax '(714) 555-4321' ");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(DoughNutsFax + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Validate Fax '(714) 555-4321' ");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." + DoughNutsFax + e);
+            assertTrue(false, "Unable to Validate Fax '(714) 555-4321' ");
         }
 		Thread.sleep(3000);
 	}
@@ -618,11 +694,14 @@ public class ProfilePage extends Baseclass{
 			}
 				
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(BHBakeryFax + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Validate Fax '(714) 555-7321' ");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(BHBakeryFax + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Validate Fax '(714) 555-7321' ");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." + BHBakeryFax + e);
+            assertTrue(false, "Unable to Validate Fax '(714) 555-7321' ");
         }
 		Thread.sleep(3000);
 	}
@@ -635,11 +714,14 @@ public class ProfilePage extends Baseclass{
 			}
 				
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(TIBERIUMSYSTEMSFax + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Validate Fax '(949) 555-5101' ");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(TIBERIUMSYSTEMSFax + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Validate Fax '(949) 555-5101' ");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." + TIBERIUMSYSTEMSFax + e);
+            assertTrue(false, "Unable to Validate Fax '(949) 555-5101' ");
         }
 		Thread.sleep(3000);
 	}
@@ -653,11 +735,14 @@ public class ProfilePage extends Baseclass{
 					
 				
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(DoughNutsEmail + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Validate Email 'tom.edison@doughnuts.com' ");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(DoughNutsEmail + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Validate Email 'tom.edison@doughnuts.com' ");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." + DoughNutsEmail + e);
+            assertTrue(false, "Unable to Validate Email 'tom.edison@doughnuts.com' ");
         }
 		Thread.sleep(3000);
 	}
@@ -670,11 +755,14 @@ public class ProfilePage extends Baseclass{
 			}
 				
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(BHBakeryEmail + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Validate Email 'michael@Yuhoo.com' ");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(BHBakeryEmail + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Validate Email 'michael@Yuhoo.com' ");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." + BHBakeryEmail + e);
+            assertTrue(false, "Unable to Validate Email 'michael@Yuhoo.com' ");
         }
 		Thread.sleep(3000);
 	}
@@ -687,11 +775,14 @@ public class ProfilePage extends Baseclass{
 			}
 				
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(TIBERIUMSYSTEMSEmail + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Validate Email 'david@noemail.com' ");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(TIBERIUMSYSTEMSEmail + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Validate Email 'david@noemail.com' ");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.."+ TIBERIUMSYSTEMSEmail + e);
+            assertTrue(false, "Unable to Validate Email 'david@noemail.com' ");
         }
 		Thread.sleep(3000);
 	}

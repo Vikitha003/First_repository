@@ -1,6 +1,7 @@
 package com.PTMWeb.pages;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -81,28 +82,18 @@ public class UpcomingPaymentspage extends Baseclass{
 			
 		} catch (StaleElementReferenceException e) {
             System.out.println(Search+"Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to clear the Search");
         } catch (NoSuchElementException e) {
             System.out.println(Search+"Element" + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to clear the Search");
         } catch (Exception e) {
             System.out.println("unable to click.."+Search + e);
+            assertTrue(false, "Unable to clear the Search");
         }
 		Thread.sleep(3000);
 	}
 	
-	public void clearSearch1() throws InterruptedException {
-		try {
-				
-				Search1.clear();
-			
-		} catch (StaleElementReferenceException e) {
-            System.out.println(Search+"Element" + " is not visble to click.." + "- StaleElementReferenceException");
-        } catch (NoSuchElementException e) {
-            System.out.println(Search+"Element" + " is not visble to click.." + "-NosuchElementException");
-        } catch (Exception e) {
-            System.out.println("unable to click.."+Search + e);
-        }
-		Thread.sleep(3000);
-	}
+	
 	
 	public void clickOnClose() throws InterruptedException {
 		try {
@@ -110,11 +101,14 @@ public class UpcomingPaymentspage extends Baseclass{
 				close.click();
 			
 		} catch (StaleElementReferenceException e) {
-	        System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+	        System.out.println(close + " is not visble to click.." + "- StaleElementReferenceException");
+	        assertTrue(false, "Unable to click on Close button");
 	    } catch (NoSuchElementException e) {
-	        System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+	        System.out.println(close + " is not visble to click.." + "-NosuchElementException");
+	        assertTrue(false, "Unable to click on Close button");
 	    } catch (Exception e) {
-	        System.out.println("unable to click.." + e);
+	        System.out.println("unable to click.." + close+ e);
+	        assertTrue(false, "Unable to click on Close button");
 	    }
 		Thread.sleep(3000);
 	}
@@ -125,11 +119,14 @@ public class UpcomingPaymentspage extends Baseclass{
 				Amount96983.click();
 			
 		} catch (StaleElementReferenceException e) {
-	        System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+	        System.out.println(Amount96983 + " is not visble to click.." + "- StaleElementReferenceException");
+	        assertTrue(false, "Unable to click on Amount");
 	    } catch (NoSuchElementException e) {
-	        System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+	        System.out.println(Amount96983 + " is not visble to click.." + "-NosuchElementException");
+	        assertTrue(false, "Unable to click on Amount");
 	    } catch (Exception e) {
-	        System.out.println("unable to click.." + e);
+	        System.out.println("unable to click.."+ Amount96983 + e);
+	        assertTrue(false, "Unable to click on Amount");
 	    }
 		Thread.sleep(3000);
 	}
@@ -140,11 +137,14 @@ public class UpcomingPaymentspage extends Baseclass{
 			Excel.click();
 			
 		} catch (StaleElementReferenceException e) {
-	        System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+	        System.out.println(Excel + " is not visble to click.." + "- StaleElementReferenceException");
+	        assertTrue(false, "Unable to click on Export to Excel button");
 	    } catch (NoSuchElementException e) {
-	        System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+	        System.out.println(Excel + " is not visble to click.." + "-NosuchElementException");
+	        assertTrue(false, "Unable to click on Export to Excel button");
 	    } catch (Exception e) {
-	        System.out.println("unable to click.." + e);
+	        System.out.println("unable to click.." + Excel + e);
+	        assertTrue(false, "Unable to click on Export to Excel button");
 	    }
 		Thread.sleep(5000);
 	}
@@ -155,11 +155,14 @@ public class UpcomingPaymentspage extends Baseclass{
 				pdf.click();
 			}
 		} catch (StaleElementReferenceException e) {
-	        System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
-	    } catch (NoSuchElementException e) {
-	        System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+	        System.out.println(pdf.isDisplayed() + " is not visble to click.." + "- StaleElementReferenceException");
+	        assertTrue(false, "Unable to click on Export to Pdf button");
+		} catch (NoSuchElementException e) {
+	        System.out.println(pdf.isDisplayed() + " is not visble to click.." + "-NosuchElementException");
+	        assertTrue(false, "Unable to click on Export to Pdf button");
 	    } catch (Exception e) {
-	        System.out.println("unable to click.." + e);
+	        System.out.println("unable to click.."+ pdf.isDisplayed() + e);
+	        assertTrue(false, "Unable to click on Export to Pdf button");
 	    }
 		Thread.sleep(3000);
 	}
@@ -170,11 +173,14 @@ public class UpcomingPaymentspage extends Baseclass{
 			Excel1.click();
 			
 		} catch (StaleElementReferenceException e) {
-	        System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+	        System.out.println(Excel1 + " is not visble to click.." + "- StaleElementReferenceException");
+	        assertTrue(false, "Unable to click on Export to Excel button");
 	    } catch (NoSuchElementException e) {
-	        System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+	        System.out.println(Excel1 + " is not visble to click.." + "-NosuchElementException");
+	        assertTrue(false, "Unable to click on Export to Excel button");
 	    } catch (Exception e) {
-	        System.out.println("unable to click.." + e);
+	        System.out.println("unable to click.." + Excel1 + e);
+	        assertTrue(false, "Unable to click on Export to Excel button");
 	    }
 		Thread.sleep(5000);
 	}
@@ -185,11 +191,14 @@ public class UpcomingPaymentspage extends Baseclass{
 				pdf1.click();
 			}
 		} catch (StaleElementReferenceException e) {
-	        System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+	        System.out.println(pdf1 + " is not visble to click.." + "- StaleElementReferenceException");
+	        assertTrue(false, "Unable to click on Export to Pdf button");
 	    } catch (NoSuchElementException e) {
-	        System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+	        System.out.println(pdf1 + " is not visble to click.." + "-NosuchElementException");
+	        assertTrue(false, "Unable to click on Export to Pdf button");
 	    } catch (Exception e) {
-	        System.out.println("unable to click.." + e);
+	        System.out.println("unable to click.." + pdf1 + e);
+	        assertTrue(false, "Unable to click on Export to Pdf button");
 	    }
 		Thread.sleep(3000);
 	}
@@ -243,10 +252,13 @@ public void searchwithDuedate() throws InterruptedException {
 			
 		} catch (StaleElementReferenceException e) {
             System.out.println(Search + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to search with Duedate");
         } catch (NoSuchElementException e) {
             System.out.println(Search + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to search with Duedate");
         } catch (Exception e) {
             System.out.println("unable to click.."+Search+ e);
+            assertTrue(false, "Unable to search with Duedate");
         }
 		Thread.sleep(3000);
 	}
@@ -258,10 +270,13 @@ public void searchwithAmount() throws InterruptedException {
 		
 	} catch (StaleElementReferenceException e) {
         System.out.println(Search + " is not visble to click.." + "- StaleElementReferenceException");
+        assertTrue(false, "Unable to search with Amount");
     } catch (NoSuchElementException e) {
         System.out.println(Search + " is not visble to click.." + "-NosuchElementException");
+        assertTrue(false, "Unable to search with Amount");
     } catch (Exception e) {
         System.out.println("unable to click.."+Search+ e);
+        assertTrue(false, "Unable to search with Amount");
     }
 	Thread.sleep(3000);
 }
@@ -273,10 +288,13 @@ public void searchwithCount() throws InterruptedException {
 		
 	} catch (StaleElementReferenceException e) {
         System.out.println(Search + " is not visble to click.." + "- StaleElementReferenceException");
+        assertTrue(false, "Unable to search with Count");
     } catch (NoSuchElementException e) {
         System.out.println(Search + " is not visble to click.." + "-NosuchElementException");
+        assertTrue(false, "Unable to search with Count");
     } catch (Exception e) {
         System.out.println("unable to click.."+Search+ e);
+        assertTrue(false, "Unable to search with Count");
     }
 	Thread.sleep(3000);
 }
@@ -284,14 +302,17 @@ public void searchwithCount() throws InterruptedException {
 public void searchwithPayrollID() throws InterruptedException {
 	
 	try {
-		Search1.sendKeys(payrollID);
+		Search1.sendKeys(payrollID_DoughNuts);
 		
 	} catch (StaleElementReferenceException e) {
         System.out.println(Search + " is not visble to click.." + "- StaleElementReferenceException");
+        assertTrue(false, "Unable to search with Payroll ID");
     } catch (NoSuchElementException e) {
         System.out.println(Search + " is not visble to click.." + "-NosuchElementException");
+        assertTrue(false, "Unable to search with Payroll ID");
     } catch (Exception e) {
         System.out.println("unable to click.."+Search+ e);
+        assertTrue(false, "Unable to search with Payroll ID");
     }
 	Thread.sleep(3000);
 }
@@ -303,10 +324,13 @@ public void searchwithAgencyID() throws InterruptedException {
 		
 	} catch (StaleElementReferenceException e) {
         System.out.println(Search + " is not visble to click.." + "- StaleElementReferenceException");
+        assertTrue(false, "Unable to search with Agency ID");
     } catch (NoSuchElementException e) {
         System.out.println(Search + " is not visble to click.." + "-NosuchElementException");
+        assertTrue(false, "Unable to search with Agency ID");
     } catch (Exception e) {
         System.out.println("unable to click.."+Search+ e);
+        assertTrue(false, "Unable to search with Agency ID");
     }
 	Thread.sleep(3000);
 }
@@ -318,10 +342,13 @@ public void searchwithDescription() throws InterruptedException {
 		
 	} catch (StaleElementReferenceException e) {
         System.out.println(Search + " is not visble to click.." + "- StaleElementReferenceException");
+        assertTrue(false, "Unable to search with Description");
     } catch (NoSuchElementException e) {
         System.out.println(Search + " is not visble to click.." + "-NosuchElementException");
+        assertTrue(false, "Unable to search with Description");
     } catch (Exception e) {
         System.out.println("unable to click.."+Search+ e);
+        assertTrue(false, "Unable to search with Description");
     }
 	Thread.sleep(3000);
 }
@@ -333,10 +360,13 @@ public void searchwithDuedate1() throws InterruptedException {
 		
 	} catch (StaleElementReferenceException e) {
         System.out.println(Search + " is not visble to click.." + "- StaleElementReferenceException");
+        assertTrue(false, "Unable to search with Duedate");
     } catch (NoSuchElementException e) {
         System.out.println(Search + " is not visble to click.." + "-NosuchElementException");
+        assertTrue(false, "Unable to search with Duedate");
     } catch (Exception e) {
         System.out.println("unable to click.."+Search+ e);
+        assertTrue(false, "Unable to search with Duedate");
     }
 	Thread.sleep(3000);
 }
@@ -348,10 +378,13 @@ public void searchwithAmount1() throws InterruptedException {
 		
 	} catch (StaleElementReferenceException e) {
         System.out.println(Search + " is not visble to click.." + "- StaleElementReferenceException");
+        assertTrue(false, "Unable to search with Amount");
     } catch (NoSuchElementException e) {
         System.out.println(Search + " is not visble to click.." + "-NosuchElementException");
+        assertTrue(false, "Unable to search with Amount");
     } catch (Exception e) {
         System.out.println("unable to click.."+Search+ e);
+        assertTrue(false, "Unable to search with Amount");
     }
 	Thread.sleep(3000);
 }
@@ -361,11 +394,14 @@ public void verifyDuedate() throws InterruptedException {
 		String btext= duedate.getText();
 		assertEquals(btext, UPDuedate);
 	} catch (StaleElementReferenceException e) {
-        System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+        System.out.println(duedate + " is not visble to click.." + "- StaleElementReferenceException");
+        assertTrue(false, "Unable to Verify Duedate");
     } catch (NoSuchElementException e) {
-        System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+        System.out.println(duedate + " is not visble to click.." + "-NosuchElementException");
+        assertTrue(false, "Unable to Verify Duedate");
     } catch (Exception e) {
-        System.out.println("unable to click.." + e);
+        System.out.println("unable to click.."+ duedate + e);
+        assertTrue(false, "Unable to Verify Duedate");
     }
 	Thread.sleep(5000);
 }
@@ -375,11 +411,14 @@ public void verifyAmount() throws InterruptedException {
 		String btext= Amount.getText();
 		assertEquals(btext, UPAmount_specialchar);
 	} catch (StaleElementReferenceException e) {
-        System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+        System.out.println(Amount + " is not visble to click.." + "- StaleElementReferenceException");
+        assertTrue(false, "Unable to Verify Amount");
     } catch (NoSuchElementException e) {
-        System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+        System.out.println(Amount + " is not visble to click.." + "-NosuchElementException");
+        assertTrue(false, "Unable to Verify Amount");
     } catch (Exception e) {
-        System.out.println("unable to click.." + e);
+        System.out.println("unable to click.." + Amount + e);
+        assertTrue(false, "Unable to Verify Amount");
     }
 	Thread.sleep(5000);
 }
@@ -389,11 +428,14 @@ public void verifyCount() throws InterruptedException {
 		String btext= count.getText();
 		assertEquals(btext, UPCount);
 	} catch (StaleElementReferenceException e) {
-        System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+        System.out.println(count + " is not visble to click.." + "- StaleElementReferenceException");
+        assertTrue(false, "Unable to Verify count");
     } catch (NoSuchElementException e) {
-        System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+        System.out.println(count + " is not visble to click.." + "-NosuchElementException");
+        assertTrue(false, "Unable to Verify count");
     } catch (Exception e) {
-        System.out.println("unable to click.." + e);
+        System.out.println("unable to click.." + count + e);
+        assertTrue(false, "Unable to Verify count");
     }
 	Thread.sleep(5000);
 }
@@ -401,13 +443,16 @@ public void verifyCount() throws InterruptedException {
 public void verifyPayrollID() throws InterruptedException {
 	try {
 		String btext= PayrollID.getText();
-		assertEquals(btext, payrollID);
+		assertEquals(btext, payrollID_DoughNuts);
 	} catch (StaleElementReferenceException e) {
-        System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+        System.out.println(PayrollID + " is not visble to click.." + "- StaleElementReferenceException");
+        assertTrue(false, "Unable to Verify Payroll ID");
     } catch (NoSuchElementException e) {
-        System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+        System.out.println(PayrollID + " is not visble to click.." + "-NosuchElementException");
+        assertTrue(false, "Unable to Verify Payroll ID");
     } catch (Exception e) {
-        System.out.println("unable to click.." + e);
+        System.out.println("unable to click.." + PayrollID + e);
+        assertTrue(false, "Unable to Verify Payroll ID");
     }
 	Thread.sleep(5000);
 }
@@ -417,11 +462,14 @@ public void verifyDescription() throws InterruptedException {
 		String btext= Description.getText();
 		assertEquals(btext, UPDescription);
 	} catch (StaleElementReferenceException e) {
-        System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+        System.out.println(Description + " is not visble to click.." + "- StaleElementReferenceException");
+        assertTrue(false, "Unable to Verify Description");
     } catch (NoSuchElementException e) {
-        System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+        System.out.println(Description + " is not visble to click.." + "-NosuchElementException");
+        assertTrue(false, "Unable to Verify Description");
     } catch (Exception e) {
-        System.out.println("unable to click.." + e);
+        System.out.println("unable to click.." + Description + e);
+        assertTrue(false, "Unable to Verify Description");
     }
 	Thread.sleep(5000);
 }
@@ -431,11 +479,14 @@ public void verifyAgencyID() throws InterruptedException {
 		String btext= AgencyId.getText();
 		assertEquals(btext, UPAgencyID);
 	} catch (StaleElementReferenceException e) {
-        System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+        System.out.println(AgencyId + " is not visble to click.." + "- StaleElementReferenceException");
+        assertTrue(false, "Unable to Verify Agency ID");
     } catch (NoSuchElementException e) {
-        System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+        System.out.println(AgencyId + " is not visble to click.." + "-NosuchElementException");
+        assertTrue(false, "Unable to Verify Agency ID");
     } catch (Exception e) {
-        System.out.println("unable to click.." + e);
+        System.out.println("unable to click.." + AgencyId + e);
+        assertTrue(false, "Unable to Verify Agency ID");
     }
 	Thread.sleep(5000);
 }
@@ -445,11 +496,14 @@ public void verifyDuedate1() throws InterruptedException {
 		String btext= Duedate1.getText();
 		assertEquals(btext, UPDuedate1);
 	} catch (StaleElementReferenceException e) {
-        System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+        System.out.println(Duedate1 + " is not visble to click.." + "- StaleElementReferenceException");
+        assertTrue(false, "Unable to Verify Duedate");
     } catch (NoSuchElementException e) {
-        System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+        System.out.println(Duedate1 + " is not visble to click.." + "-NosuchElementException");
+        assertTrue(false, "Unable to Verify Duedate");
     } catch (Exception e) {
-        System.out.println("unable to click.." + e);
+        System.out.println("unable to click.." + Duedate1 + e);
+        assertTrue(false, "Unable to Verify Duedate");
     }
 	Thread.sleep(5000);
 }
@@ -459,11 +513,14 @@ public void verifyAmount1() throws InterruptedException {
 		String btext= Amount1.getText();
 		assertEquals(btext, UPAmount1_Specialchar);
 	} catch (StaleElementReferenceException e) {
-        System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+        System.out.println(Amount1 + " is not visble to click.." + "- StaleElementReferenceException");
+        assertTrue(false, "Unable to Verify Amount");
     } catch (NoSuchElementException e) {
-        System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+        System.out.println(Amount1 + " is not visble to click.." + "-NosuchElementException");
+        assertTrue(false, "Unable to Verify Amount");
     } catch (Exception e) {
-        System.out.println("unable to click.." + e);
+        System.out.println("unable to click.." + Amount1 + e);
+        assertTrue(false, "Unable to Verify Amount");
     }
 	Thread.sleep(5000);
 }

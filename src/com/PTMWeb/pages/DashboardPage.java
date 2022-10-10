@@ -1,5 +1,7 @@
 package com.PTMWeb.pages;
 
+import static org.testng.Assert.assertTrue;
+
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -97,11 +99,14 @@ public class DashboardPage extends Baseclass{
 				 clientdetails.click();
 			
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(clientdetails  + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to select client List");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(clientdetails  + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to select client List");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." + clientdetails + e);
+            assertTrue(false, "Unable to select client List");
         }
 		Thread.sleep(4000);
 	}
@@ -114,11 +119,14 @@ public class DashboardPage extends Baseclass{
 				Thread.sleep(3000);
 			
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(selectClientDough  + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to select DoughNuts INC client from the list");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(selectClientDough  + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to select DoughNuts INC client from the list");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.."+ selectClientDough + e);
+            assertTrue(false, "Unable to select DoughNuts INC client from the list");
         }
 		
 	}
@@ -131,11 +139,14 @@ public class DashboardPage extends Baseclass{
 				Thread.sleep(4000);
 			
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(selectClientBHBakeryInc  + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to select BH BAKERY INC client from the list");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(selectClientBHBakeryInc  + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to select BH BAKERY INC client from the list");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." + selectClientBHBakeryInc+ e);
+            assertTrue(false, "Unable to select BH BAKERY INC client from the list");
         }
 	}
 	
@@ -147,11 +158,14 @@ public class DashboardPage extends Baseclass{
 				Thread.sleep(5000);
 			
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(selectClientTiberiumSystemsLLC + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to select TIBERIUM SYSTEMS LLC client from the list");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(selectClientTiberiumSystemsLLC + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to select TIBERIUM SYSTEMS LLC client from the list");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." +selectClientTiberiumSystemsLLC+ e);
+            assertTrue(false, "Unable to select TIBERIUM SYSTEMS LLC client from the list");
         }
 	}
 	
@@ -161,11 +175,14 @@ public class DashboardPage extends Baseclass{
 				LiabilitiesIssues.click();
 			
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(LiabilitiesIssues + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Click Liabilities Issues Summary Card");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(LiabilitiesIssues + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Click Liabilities Issues Summary Card");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.."+ LiabilitiesIssues + e);
+            assertTrue(false, "Unable to Click Liabilities Issues Summary Card");
         }
 		Thread.sleep(6000);
 	}
@@ -178,11 +195,14 @@ public class DashboardPage extends Baseclass{
 				fundingIssues.click();
 			
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(fundingIssues + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Click Funding Issues Summary Card");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(fundingIssues + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Click Funding Issues Summary Card");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." + fundingIssues+ e);
+            assertTrue(false, "Unable to Click Funding Issues Summary Card");
         }
 		Thread.sleep(6000);
 	}
@@ -195,11 +215,14 @@ public class DashboardPage extends Baseclass{
 				PaymentIssues.click();
 			
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(PaymentIssues + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Click Payments Issues Summary Card");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(PaymentIssues + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Click Payments Issues Summary Card");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." + PaymentIssues + e);
+            assertTrue(false, "Unable to Click Payments Issues Summary Card");
         }
 		Thread.sleep(6000);
 	}
@@ -210,11 +233,14 @@ public class DashboardPage extends Baseclass{
 			NSFHold.click();
 			
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(NSFHold + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Click NSF Hold Summary Card");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(NSFHold + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Click NSF Hold Summary Card");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.."+ NSFHold + e);
+            assertTrue(false, "Unable to Click NSF Hold Summary Card");
         }
 		Thread.sleep(6000);
 	}
@@ -225,11 +251,14 @@ public class DashboardPage extends Baseclass{
 				AppliedFor.click();
 			
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(AppliedFor + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Click Applied For Summary Card");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(AppliedFor + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Click Applied For Summary Card");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." + AppliedFor + e);
+            assertTrue(false, "Unable to Click Applied For Summary Card");
         }
 		Thread.sleep(6000);
 	}
@@ -240,11 +269,14 @@ public class DashboardPage extends Baseclass{
 				Alerts.click();
 			
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(Alerts + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to Click Alerts Summary Card");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(Alerts + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to Click Alerts Summary Card");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.."+ Alerts + e);
+            assertTrue(false, "Unable to Click Alerts Summary Card");
         }
 		Thread.sleep(6000);
 	}
@@ -252,14 +284,17 @@ public class DashboardPage extends Baseclass{
 	public void searchByRecentLiabilities() throws InterruptedException {
 		try {
 				
-				searchRecentLiablities.sendKeys(payrollID);
+				searchRecentLiablities.sendKeys(payrollID_DoughNuts);
 			
 	}catch (StaleElementReferenceException e) {
-        System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+        System.out.println(searchRecentLiablities + " is not visble to click.." + "- StaleElementReferenceException");
+        assertTrue(false, "Unable to Search in Recent Liabilities");
     } catch (NoSuchElementException e) {
-        System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+        System.out.println(searchRecentLiablities + " is not visble to click.." + "-NosuchElementException");
+        assertTrue(false, "Unable to Search in Recent Liabilities");
     } catch (Exception e) {
-        System.out.println("unable to click.." + e);
+        System.out.println("unable to click.." + searchRecentLiablities + e);
+        assertTrue(false, "Unable to Search in Recent Liabilities");
     }
 		Thread.sleep(6000);
  }
@@ -269,11 +304,14 @@ public class DashboardPage extends Baseclass{
 			
 			payrollid.click();
 		} catch (StaleElementReferenceException e) {
-	        System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+	        System.out.println(payrollid  + " is not visble to click.." + "- StaleElementReferenceException");
+	        assertTrue(false, "Unable to click on Payroll ID");
 	    } catch (NoSuchElementException e) {
-	        System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+	        System.out.println(payrollid + " is not visble to click.." + "-NosuchElementException");
+	        assertTrue(false, "Unable to click on Payroll ID");
 	    } catch (Exception e) {
-	        System.out.println("unable to click.." + e);
+	        System.out.println("unable to click.." + payrollid + e);
+	        assertTrue(false, "Unable to click on Payroll ID");
 	    }
 	}
 	
@@ -283,11 +321,14 @@ public class DashboardPage extends Baseclass{
 				SearchUpcomingPayments.click();
 			
 		} catch (StaleElementReferenceException e) {
-	        System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+	        System.out.println(SearchUpcomingPayments + " is not visble to click.." + "- StaleElementReferenceException");
+	        assertTrue(false, "Unable to search in Upcoming Payments");
 	    } catch (NoSuchElementException e) {
-	        System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+	        System.out.println(SearchUpcomingPayments + " is not visble to click.." + "-NosuchElementException");
+	        assertTrue(false, "Unable to search in Upcoming Payments");
 	    } catch (Exception e) {
-	        System.out.println("unable to click.." + e);
+	        System.out.println("unable to click.." + SearchUpcomingPayments + e);
+	        assertTrue(false, "Unable to search in Upcoming Payments");
 	    }
 		Thread.sleep(6000);
 	}
@@ -299,11 +340,14 @@ public class DashboardPage extends Baseclass{
 			Excel.click();
 			
 		} catch (StaleElementReferenceException e) {
-	        System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+	        System.out.println(Excel + " is not visble to click.." + "- StaleElementReferenceException");
+	        assertTrue(false, "Unable to to click on Export to Excel button");
 	    } catch (NoSuchElementException e) {
-	        System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+	        System.out.println(Excel + " is not visble to click.." + "-NosuchElementException");
+	        assertTrue(false, "Unable to to click on Export to Excel button");
 	    } catch (Exception e) {
-	        System.out.println("unable to click.." + e);
+	        System.out.println("unable to click.." + Excel + e);
+	        assertTrue(false, "Unable to to click on Export to Excel button");
 	    }
 		Thread.sleep(5000);
 	}
@@ -315,11 +359,14 @@ public class DashboardPage extends Baseclass{
 			pdf.click();
 			
 		} catch (StaleElementReferenceException e) {
-	        System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+	        System.out.println(pdf + " is not visble to click.." + "- StaleElementReferenceException");
+	        assertTrue(false, "Unable to to click on Export to Pdf button");
 	    } catch (NoSuchElementException e) {
-	        System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+	        System.out.println(pdf + " is not visble to click.." + "-NosuchElementException");
+	        assertTrue(false, "Unable to to click on Export to Pdf button");
 	    } catch (Exception e) {
-	        System.out.println("unable to click.." + e);
+	        System.out.println("unable to click.." + pdf + e);
+	        assertTrue(false, "Unable to to click on Export to Pdf button");
 	    }
 		Thread.sleep(3000);
 	}
@@ -331,11 +378,14 @@ public class DashboardPage extends Baseclass{
 			NSFCardcolourRed.isDisplayed();
 			
 		} catch (StaleElementReferenceException e) {
-	        System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+	        System.out.println(NSFCardcolourRed + " is not visble to click.." + "- StaleElementReferenceException");
+	        assertTrue(false, "NSF Hold Card color is not in Red");
 	    } catch (NoSuchElementException e) {
-	        System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+	        System.out.println(NSFCardcolourRed + " is not visble to click.." + "-NosuchElementException");
+	        assertTrue(false, "NSF Hold Card color is not in Red");
 	    } catch (Exception e) {
-	        System.out.println("unable to click.." + e);
+	        System.out.println("unable to click.." + NSFCardcolourRed + e);
+	        assertTrue(false, "NSF Hold Card color is not in Red");
 	    }
 		Thread.sleep(3000);
 	}
@@ -347,11 +397,14 @@ public class DashboardPage extends Baseclass{
 			NSFCardcolourGreen.isDisplayed();
 			
 		} catch (StaleElementReferenceException e) {
-	        System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+	        System.out.println(NSFCardcolourGreen + " is not visble to click.." + "- StaleElementReferenceException");
+	        assertTrue(false, "NSF Hold Card color is not in Green");
 	    } catch (NoSuchElementException e) {
-	        System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+	        System.out.println(NSFCardcolourGreen + " is not visble to click.." + "-NosuchElementException");
+	        assertTrue(false, "NSF Hold Card color is not in Green");
 	    } catch (Exception e) {
-	        System.out.println("unable to click.." + e);
+	        System.out.println("unable to click.." + NSFCardcolourGreen + e);
+	        assertTrue(false, "NSF Hold Card color is not in Green");
 	    }
 		Thread.sleep(3000);
 	}

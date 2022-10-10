@@ -56,10 +56,13 @@ public class NSFHoldPage extends Baseclass{
 			
 		} catch (StaleElementReferenceException e) {
             System.out.println(Search+"Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to clear the search");
         } catch (NoSuchElementException e) {
             System.out.println(Search+"Element" + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to clear the search");
         } catch (Exception e) {
             System.out.println("unable to click.."+Search + e);
+            assertTrue(false, "Unable to clear the search");
         }
 		Thread.sleep(3000);
 	}
@@ -67,14 +70,17 @@ public class NSFHoldPage extends Baseclass{
 public void searchwithPayrollID() throws InterruptedException {
 		
 		try {
-			Search.sendKeys(payrollID);
+			Search.sendKeys(payrollID_DoughNuts);
 			
 		} catch (StaleElementReferenceException e) {
             System.out.println(Search + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to search with Payroll ID in NSF Hold");
         } catch (NoSuchElementException e) {
             System.out.println(Search + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to search with Payroll ID in NSF Hold");
         } catch (Exception e) {
             System.out.println("unable to click.."+Search+ e);
+            assertTrue(false, "Unable to search with Payroll ID in NSF Hold");
         }
 		Thread.sleep(3000);
 	}
@@ -82,7 +88,7 @@ public void searchwithPayrollID() throws InterruptedException {
 	public void searchwithAgencyID() throws InterruptedException {
 		
 		try {
-			Search.sendKeys(NSFAgentID);
+			Search.sendKeys(NSFHold_AgentID);
 			
 		} catch (StaleElementReferenceException e) {
 	        System.out.println(Search +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
@@ -100,7 +106,7 @@ public void searchwithPayrollID() throws InterruptedException {
 	public void searchwithDescription() throws InterruptedException {
 		
 		try {
-			Search.sendKeys(NSFDescription);
+			Search.sendKeys(NSFHold_Description);
 			
 		} catch (StaleElementReferenceException e) {
 	        System.out.println(Search +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
@@ -118,7 +124,7 @@ public void searchwithPayrollID() throws InterruptedException {
 	public void searchwithAmount() throws InterruptedException {
 		
 		try {
-			Search.sendKeys(NSFAmount);
+			Search.sendKeys(NSFHold_Amount);
 			
 		} catch (StaleElementReferenceException e) {
 	        System.out.println(Search +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
@@ -136,7 +142,7 @@ public void searchwithPayrollID() throws InterruptedException {
 	public void verifyPayrollID() throws InterruptedException {
 		try {
 			String btext= payrollId.getText();
-			assertEquals(btext, payrollID);
+			assertEquals(btext, payrollID_DoughNuts);
 		} catch (StaleElementReferenceException e) {
 	        System.out.println(payrollId +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
 	        assertTrue(false, "Unable to verify PayrollID in NSF Hold");
@@ -172,7 +178,7 @@ public void searchwithPayrollID() throws InterruptedException {
 	public void verifyAgencyID() throws InterruptedException {
 		try {
 			String btext= AgencyID.getText();
-			assertEquals(btext, NSFAgentID);
+			assertEquals(btext, NSFHold_AgentID);
 		} catch (StaleElementReferenceException e) {
 	        System.out.println(AgencyID +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
 	        assertTrue(false, "Unable to verify AgencyID in NSF Hold");
@@ -205,7 +211,7 @@ public void searchwithPayrollID() throws InterruptedException {
 	public void verifyDescription() throws InterruptedException {
 		try {
 			String btext= Description.getText();
-			assertEquals(btext, NSFDescription);
+			assertEquals(btext, NSFHold_Description);
 		} catch (StaleElementReferenceException e) {
 	        System.out.println(Description +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
 	        assertTrue(false, "Unable to verify Description in NSF Hold");
@@ -222,7 +228,7 @@ public void searchwithPayrollID() throws InterruptedException {
 	public void verifyAmount() throws InterruptedException {
 		try {
 			String btext= Amount.getText();
-			assertEquals(btext, NSFAmount_specialchar);
+			assertEquals(btext, NSFHold_Amount_specialchar);
 		} catch (StaleElementReferenceException e) {
 	        System.out.println(Amount +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
 	        assertTrue(false, "Unable to verify Amount in NSF Hold");

@@ -62,10 +62,13 @@ public class AppliedForPage extends Baseclass{
 			
 		} catch (StaleElementReferenceException e) {
             System.out.println(Search+"Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to clear the search");
         } catch (NoSuchElementException e) {
             System.out.println(Search+"Element" + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to clear the search");
         } catch (Exception e) {
             System.out.println("unable to click.."+Search + e);
+            assertTrue(false, "Unable to clear the search");
         }
 		Thread.sleep(3000);
 	}
@@ -73,14 +76,17 @@ public class AppliedForPage extends Baseclass{
 public void searchwithPayrollID() throws InterruptedException {
 		
 		try {
-			Search.sendKeys(payrollID);
+			Search.sendKeys(payrollID_DoughNuts);
 			
 		} catch (StaleElementReferenceException e) {
             System.out.println(Search + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to search with Payroll ID");
         } catch (NoSuchElementException e) {
             System.out.println(Search + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to search with Payroll ID");
         } catch (Exception e) {
             System.out.println("unable to click.."+Search+ e);
+            assertTrue(false, "Unable to search with Payroll ID");
         }
 		Thread.sleep(3000);
 	}
@@ -88,7 +94,7 @@ public void searchwithPayrollID() throws InterruptedException {
 public void searchwithAgencyID() throws InterruptedException {
 	
 	try {
-		Search.sendKeys(AFAgencyID);
+		Search.sendKeys(AppliedFor_AgencyID);
 		
 	} catch (StaleElementReferenceException e) {
         System.out.println(Search +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
@@ -106,7 +112,7 @@ public void searchwithAgencyID() throws InterruptedException {
 public void searchwithDescription() throws InterruptedException {
 	
 	try {
-		Search.sendKeys(AFDescription);
+		Search.sendKeys(AppliedFor_Description);
 		
 	} catch (StaleElementReferenceException e) {
         System.out.println(Search +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
@@ -124,7 +130,7 @@ public void searchwithDescription() throws InterruptedException {
 public void searchwithDuedate() throws InterruptedException {
 	
 	try {
-		Search.sendKeys(AFDuedate);
+		Search.sendKeys(AppliedFor_Duedate);
 		
 	} catch (StaleElementReferenceException e) {
         System.out.println(Search +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
@@ -141,7 +147,7 @@ public void searchwithDuedate() throws InterruptedException {
 public void searchwithAmount() throws InterruptedException {
 	
 	try {
-		Search.sendKeys(AFAmount);
+		Search.sendKeys(AppliedFor_Amount);
 		
 	} catch (StaleElementReferenceException e) {
         System.out.println(Search +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
@@ -159,7 +165,7 @@ public void searchwithAmount() throws InterruptedException {
 public void searchwithCheckdate() throws InterruptedException {
 	
 	try {
-		Search.sendKeys(AFCheckDate);
+		Search.sendKeys(AppliedFor_CheckDate);
 		
 	} catch (StaleElementReferenceException e) {
         System.out.println(Search +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
@@ -213,7 +219,7 @@ public void clickOnExporttoPdf() throws InterruptedException {
 public void verifyPayrollID() throws InterruptedException {
 	try {
 		String btext= payrollId.getText();
-		assertEquals(btext, payrollID);
+		assertEquals(btext, payrollID_DoughNuts);
 	} catch (StaleElementReferenceException e) {
         System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
     } catch (NoSuchElementException e) {
@@ -227,7 +233,7 @@ public void verifyPayrollID() throws InterruptedException {
 public void verifyAgencyID() throws InterruptedException {
 	try {
 		String btext= AgencyID.getText();
-		assertEquals(btext, AFAgencyID);
+		assertEquals(btext, AppliedFor_AgencyID);
 	} catch (StaleElementReferenceException e) {
         System.out.println(AgencyID +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
         assertTrue(false, "AgencyID is not verified in Applied For Page");
@@ -244,7 +250,7 @@ public void verifyAgencyID() throws InterruptedException {
 public void verifyDecription() throws InterruptedException {
 	try {
 		String btext= Description.getText();
-		assertEquals(btext, AFDescription);
+		assertEquals(btext, AppliedFor_Description);
 	} catch (StaleElementReferenceException e) {
         System.out.println(Description +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
         assertTrue(false, "Description is not verified in Applied For Page");
@@ -261,7 +267,7 @@ public void verifyDecription() throws InterruptedException {
 public void verifyCheckDate() throws InterruptedException {
 	try {
 		String btext= checkDate.getText();
-		assertEquals(btext, AFCheckDate);
+		assertEquals(btext, AppliedFor_CheckDate);
 	} catch (StaleElementReferenceException e) {
         System.out.println(checkDate +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
         assertTrue(false, "checkDate is not verified in Applied For Page");
@@ -278,7 +284,7 @@ public void verifyCheckDate() throws InterruptedException {
 public void verifyDueDate() throws InterruptedException {
 	try {
 		String btext= Duedate.getText();
-		assertEquals(btext, AFDuedate);
+		assertEquals(btext, AppliedFor_Duedate);
 	} catch (StaleElementReferenceException e) {
         System.out.println(Duedate +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
         assertTrue(false, "Duedate is not verified in Applied For Page");
@@ -295,7 +301,7 @@ public void verifyDueDate() throws InterruptedException {
 public void verifyAmount() throws InterruptedException {
 	try {
 		String btext= Amount.getText();
-		assertEquals(btext, VerifyAFAmount_specialchar);
+		assertEquals(btext, AppliedFor_Amount_specialchar);
 	} catch (StaleElementReferenceException e) {
         System.out.println(Amount +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
         assertTrue(false, "Amount is not verified in Applied For Page");

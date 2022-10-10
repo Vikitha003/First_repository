@@ -1,5 +1,7 @@
 package com.PTMWeb.pages;
 
+import static org.testng.Assert.assertTrue;
+
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
@@ -35,11 +37,14 @@ public class HomePage extends Baseclass{
 				Thread.sleep(3000);
 			
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(Dashboard + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to click on Dashboard");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(Dashboard + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to click on Dashboard");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." + Dashboard + e);
+            assertTrue(false, "Unable to click on Dashboard");
         }
 		
 	}
@@ -51,11 +56,14 @@ public class HomePage extends Baseclass{
 				Thread.sleep(3000);
 			
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(TaxPackages + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to click on Tax Packages");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(TaxPackages + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to click on Tax Packages");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." + TaxPackages + e);
+            assertTrue(false, "Unable to click on Tax Packages");
         }
 		
 	}
@@ -67,11 +75,14 @@ public class HomePage extends Baseclass{
 				Thread.sleep(3000);
 			
 		} catch (StaleElementReferenceException e) {
-            System.out.println("Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            System.out.println(Profile + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to click on Profile");
         } catch (NoSuchElementException e) {
-            System.out.println("Element" + " is not visble to click.." + "-NosuchElementException");
+            System.out.println(Profile + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to click on Profile");
         } catch (Exception e) {
-            System.out.println("unable to click.." + e);
+            System.out.println("unable to click.." + Profile + e);
+            assertTrue(false, "Unable to click on Profile");
         }
 		
 	}

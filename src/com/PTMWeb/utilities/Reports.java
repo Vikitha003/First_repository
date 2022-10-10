@@ -23,7 +23,7 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-import atu.testrecorder.ATUTestRecorder;
+
 
 
 public class Reports extends Baseclass implements ITestListener{
@@ -33,22 +33,16 @@ public class Reports extends Baseclass implements ITestListener{
 	public static ExtentTest logger;
 	static String df = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 	
-	public Reports() {
-		
-	}
 	
 	public static ExtentReports InitializeReport()
     {
         if (extent == null)
         {
-            //Initialize Extent report before test starts
-            //var htmlReporter = new ExtentHtmlReporter(GetExtentReportsFolder());
-            //htmlReporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;
+            
         	String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
     		String repName = "PTM Web-Report-"+timestamp+".html";
             
-            //htmlReporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;
-            //Attach report to reporter
+            
             sparkReporter=new ExtentSparkReporter("C:\\Users\\Veeralakshmi.bikkina\\PTMWeb\\"+repName);
     		
     		try {
@@ -67,10 +61,9 @@ public class Reports extends Baseclass implements ITestListener{
     		sparkReporter.config().setDocumentTitle("Asure Tax Portal");
     		sparkReporter.config().setReportName("Regression Test Report");
     		sparkReporter.config().setTheme(Theme.STANDARD);
+    		
         }
         return extent;
-
-
 
    }
 	
@@ -99,7 +92,6 @@ public class Reports extends Baseclass implements ITestListener{
 		sparkReporter.config().setTheme(Theme.STANDARD);
 		
 	}
-	
 	
 	
 	public void onTestSuccess(ITestResult tr) {
@@ -146,6 +138,7 @@ public class Reports extends Baseclass implements ITestListener{
 	@AfterTest
 	public void onFinish(ITestContext testContext) {
 		extent.flush();
+		
 	}
 	
 	
@@ -155,3 +148,6 @@ public class Reports extends Baseclass implements ITestListener{
 	
 
 }
+	
+
+

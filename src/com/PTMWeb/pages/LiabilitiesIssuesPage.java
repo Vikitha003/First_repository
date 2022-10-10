@@ -56,10 +56,13 @@ public class LiabilitiesIssuesPage extends Baseclass{
 			
 		} catch (StaleElementReferenceException e) {
             System.out.println(Search+"Element" + " is not visble to click.." + "- StaleElementReferenceException");
+            assertTrue(false, "Unable to clear the Search");
         } catch (NoSuchElementException e) {
             System.out.println(Search+"Element" + " is not visble to click.." + "-NosuchElementException");
+            assertTrue(false, "Unable to clear the Search");
         } catch (Exception e) {
             System.out.println("unable to click.."+Search + e);
+            assertTrue(false, "Unable to clear the Search");
             
         }
 		Thread.sleep(3000);
@@ -69,7 +72,7 @@ public class LiabilitiesIssuesPage extends Baseclass{
 		
 		try {
 				
-				Search.sendKeys(payrollID);
+				Search.sendKeys(payrollID_DoughNuts);
 			
 		} catch (StaleElementReferenceException e) {
             System.out.println(Search +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
@@ -220,7 +223,7 @@ public void searchwithPayrollID_TIBERIUM() throws InterruptedException {
 		try {
 			
 			String btext= payrollId.getText();
-			assertEquals(btext, payrollID);
+			assertEquals(btext, payrollID_DoughNuts);
 			assertTrue(true, "Payroll ID is Verified in Liabilities Issues");
 		} catch (StaleElementReferenceException e) {
             System.out.println(payrollId +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
@@ -277,7 +280,7 @@ public void searchwithPayrollID_TIBERIUM() throws InterruptedException {
 		try {
 			
 			String btext= checkDate.getText();
-			Assert.assertEquals(btext, LIcheckDate);
+			Assert.assertEquals(btext, LiabilitiesIssues_checkDate);
 			
 			assertTrue(true, "Check Date is Verified in Liabilities Issues");
 		} catch (StaleElementReferenceException e) {
@@ -301,7 +304,7 @@ public void searchwithPayrollID_TIBERIUM() throws InterruptedException {
 		try {
 			
 			String btext= Reason.getText();
-			assertEquals(btext, LIReason);
+			assertEquals(btext, LiabilitiesIssues_Reason);
 			assertTrue(true, "Reason is Verified in Liabilities Issues");
 		} catch (StaleElementReferenceException e) {
             System.out.println(Reason +"Element" + " is not visble to click.." + "- StaleElementReferenceException");
